@@ -3,11 +3,19 @@ import { useState } from "react";
 
 export default function ContactSection() {
   const [form, setForm] = useState({
-    name: "",
+    firstName: "",
+    lastName: "",
     email: "",
+    phone: "",
     message: "",
     budget: "",
   });
+
+  const isFormValid =
+    form.firstName.trim() &&
+    form.lastName.trim() &&
+    form.email.trim() &&
+    form.message.trim();
 
   function handleChange(event) {
     const { name, value } = event.target;
@@ -24,22 +32,22 @@ export default function ContactSection() {
   return (
     <section id="contact" className="section contact">
       <header className="section-header">
-        <p className="section-label">Let’s talk</p>
-        <h2 className="section-title">Request a quote</h2>
+        <p className="section-label">Kontakt</p>
+        <h2 className="section-title">Stellen Sie uns eine Anfrage</h2>
         <p className="section-description">
-          Erzähl uns kurz von deinem Projekt – wir melden uns mit einer
-          Einschätzung zurück.
+          Erzählen Sie uns kurz von Ihrem Projekt – wir melden uns mit einer Einschätzung zurück.
         </p>
       </header>
 
       <form className="contact-form" onSubmit={handleSubmit}>
         <div className="form-row">
           <label>
-            Name
+            Vorname *
             <input
-              name="name"
+              name="firstName"
               type="text"
-              value={form.name}
+              placeholder="Vorname"
+              value={form.firstName}
               onChange={handleChange}
               required
             />
@@ -48,13 +56,41 @@ export default function ContactSection() {
 
         <div className="form-row">
           <label>
-            Email
+            Nachname *
+            <input
+              name="lastName"
+              type="text"
+              placeholder="Nachname"
+              value={form.lastName}
+              onChange={handleChange}
+              required
+            />
+          </label>
+        </div>
+
+        <div className="form-row">
+          <label>
+            E‑Mail Adresse *
             <input
               name="email"
               type="email"
+              placeholder="E-Mail-Adresse"
               value={form.email}
               onChange={handleChange}
               required
+            />
+          </label>
+        </div>
+
+        <div className="form-row">
+          <label>
+            Telefonnummer (optional)
+            <input
+              name="phone"
+              type="tel"
+              placeholder="Telefonnummer"
+              value={form.phone}
+              onChange={handleChange}
             />
           </label>
         </div>
@@ -77,10 +113,11 @@ export default function ContactSection() {
 
         <div className="form-row">
           <label>
-            Project description
+            Projektbeschreibung *
             <textarea
               name="message"
               rows="4"
+              placeholder="Bitte geben Sie uns Details Ihres Projekts an..."
               value={form.message}
               onChange={handleChange}
               required
@@ -88,8 +125,12 @@ export default function ContactSection() {
           </label>
         </div>
 
-        <button type="submit" className="btn btn-primary">
-          Send request
+        <button
+          type="submit"
+          className="btn btn-primary"
+          disabled={!isFormValid}
+        >
+          Anfrage senden
         </button>
       </form>
     </section>
