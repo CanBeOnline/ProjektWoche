@@ -1,8 +1,19 @@
+// src/pages/Home.jsx
+import HeroSection from "../sections/HeroSection.jsx";
+import ServicesSection from "../sections/ServicesSection.jsx";
+import ProjectsSection from "../sections/ProjectsSection.jsx";
+import TestimonialsSection from "../sections/TestimonialsSection.jsx";
+import ContactSection from "../sections/ContactSection.jsx";
+// optional später: TeamSection
+
 export default function Home() {
   return (
     <>
-      <h1>Hype Media Agency</h1>
-      <p>Landing Page Basis steht – wir bauen jetzt die Sections Schritt für Schritt aus.</p>
+      <HeroSection />
+      <ServicesSection />
+      <ProjectsSection />
+      <TestimonialsSection />
+      <ContactSection />
     </>
   );
 }
