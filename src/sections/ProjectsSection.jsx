@@ -12,7 +12,7 @@ export default function ProjectsSection() {
         </p>
       </header>
 
-      <div className="projects-grid">
+      <div className=" projects-grid">
         {/* Platzhalter – später mit projects.json füllen */}
         <article className="project-card">
           <h3>Launch Campaign – SaaS Startup</h3>
