@@ -1,0 +1,39 @@
+[
+  {
+    "id": "saas-launch",
+    "title": "Launch Campaign – SaaS Startup",
+    "description": "Full funnel launch mit Landing Page, Paid Social Ads und Conversion-optimiertem Content.",
+    "tags": ["Web", "Paid Social", "Content"],
+    "thumbnail": "https://images.unsplash.com/photo-1522199710521-72d69614c702?auto=format&fit=crop&w=900&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1485217988980-11786ced9454?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "liveLink": "https://example.com/saas"
+  },
+  {
+    "id": "coffee-rebrand",
+    "title": "Rebrand – Local Coffee Chain",
+    "description": "Neue digitale Brand Experience inkl. Website, Packaging und Social Templates.",
+    "tags": ["Branding", "Web", "Social"],
+    "thumbnail": "https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=900&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "liveLink": "https://example.com/coffee"
+  },
+  {
+    "id": "fashion-social",
+    "title": "Always-on Social – Fashion Brand",
+    "description": "Content-Plan, Reels-Produktion und Creator Collabs für nachhaltiges Wachstum.",
+    "tags": ["Social", "Content", "Influencer"],
+    "thumbnail": "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=900&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "liveLink": "https://example.com/fashion"
+  }
+]
+

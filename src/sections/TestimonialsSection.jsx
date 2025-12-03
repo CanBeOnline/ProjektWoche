@@ -1,4 +1,5 @@
-// src/sections/TestimonialsSection.jsx
+import { testimonials } from "../data/index.js";
+import TestimonialCard from "../components/cards/TestimonialCard.jsx";
 
 export default function TestimonialsSection() {
   return (
@@ -9,24 +10,9 @@ export default function TestimonialsSection() {
       </header>
 
       <div className="testimonials-grid">
-        {/* später: aus testimonials.json */}
-        <article className="testimonial-card">
-          <p className="testimonial-text">
-            “They helped us double our online revenue in less than 3 months.”
-          </p>
-          <p className="testimonial-author">
-            Anna K. – Founder, DTC Brand
-          </p>
-        </article>
-
-        <article className="testimonial-card">
-          <p className="testimonial-text">
-            “Super klarer Prozess, starke Designs und performante Kampagnen.”
-          </p>
-          <p className="testimonial-author">
-            Jonas M. – CEO, SaaS Startup
-          </p>
-        </article>
+        {testimonials.map((testimonial) => (
+          <TestimonialCard key={testimonial.id} testimonial={testimonial} />
+        ))}
       </div>
     </section>
   );

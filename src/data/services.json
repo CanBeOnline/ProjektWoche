@@ -1,0 +1,31 @@
+[
+  {
+    "id": "strategy",
+    "title": "Digital Strategy & Positioning",
+    "description": "Workshops, Zielgruppensegmente und Growth Playbooks, damit jede Kampagne auf klaren KPIs basiert.",
+    "icon": "DS",
+    "category": "Strategy"
+  },
+  {
+    "id": "web",
+    "title": "Web Design & Development",
+    "description": "High-Performance Websites und Landing Pages mit Headless CMS, perfektem UX-Flow und messbarer Conversion.",
+    "icon": "WD",
+    "category": "Experience"
+  },
+  {
+    "id": "content",
+    "title": "Content & Social Media",
+    "description": "Always-on Content-Produktionen, Creator-Kooperationen und Paid-Social-Setups für nachhaltiges Wachstum.",
+    "icon": "SM",
+    "category": "Growth"
+  },
+  {
+    "id": "branding",
+    "title": "Branding & Visual Systems",
+    "description": "Visuelle Identitäten, Motion Systeme und Brand Guidelines, die in allen Touchpoints funktionieren.",
+    "icon": "BV",
+    "category": "Identity"
+  }
+]
+

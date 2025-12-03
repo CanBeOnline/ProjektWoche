@@ -1,78 +1,66 @@
-1) BRANDING FESTLEGEN (Schritt 1 – jetzt als Nächstes)
+1) BRANDING FESTLEGEN (Schritt 1 – erledigt)
 
-Bevor wir Komponenten bauen, wird definiert:
+Branding-Entscheidungen sind dokumentiert (`docs/branding.md`):
 
-1.1 Agenturname
+1.1 Agenturname  
+**Hype Media Agency** inkl. Claim „Progressive Digital Experiences for Ambitious Brands“.
 
-Damit alles konsistent ist (Hero, Logo, Farben etc.)
+1.2 Farbpalette  
+Nutzung der `primary`, `secondary`, `neutral` Skalen aus `tailwind.config.js` (z. B. Primary 500 `#0ea5e9`, Secondary 500 `#a855f7`).
 
-1.2 Farbpalette
+1.3 Fonts  
+Headlines: **Poppins** (Bold/ExtraBold), Body: **Inter Variable** (Regular/Medium), Fallback: system sans.
 
-Modern, digital, hochwertig.
-
-1.3 Fonts
-
-Headline-Font + Body-Font, ideal für Web.
-
-1.4 Tone of Voice
-
-Professionell, progressiv, modern.
+1.4 Tone of Voice  
+Professionell, progressiv, modern – kurze aktive Sätze, Fokus auf Ergebnisse.
 
 Ergebnis:
 
-→ Eine fertige Brand Identity.
+→ Fertige Brand Identity (siehe `docs/branding.md`).
 
 ⸻
 
-2) SEITENSTRUKTUR DEFINIEREN (Schritt 2)
+2) SEITENSTRUKTUR DEFINIEREN (Schritt 2 – erledigt)
 
-Basierend auf Creative Digital Agency:
+Umgesetzt über React Router (siehe `src/App.jsx`):
 
-Sections:
+Sections auf der Startseite:
 	1.	Hero
 	2.	Services
-	3.	Portfolio / Projekte
+	3.	Projects (Teaser)
 	4.	Testimonials
-	5.	Über uns / Team (optional)
-	6.	Kontaktformular
-	7.	Footer
+	5.	Kontaktformular
+	6.	Footer
 
-Sitemap:
-	•	/ (Home)
+Routen/Sitemap:
+	•	/ (Home mit allen Sections)
+	•	/services (eigene Services-Seite, nutzt `ServicesSection`)
+	•	/projects (Projektübersicht)
 	•	/projects/:id (Project Detail)
-	•	/services optional
-	•	/contact optional
+	•	/contact (Kontakt-Seite mit Formular)
+	•	* (Fallback → NotFound)
 
-Danach erstellen wir die React-Ordnerstruktur exakt passend zur Sitemap.
+Layout via `MainLayout` (Header/Footer) + `Outlet`-ähnlicher Wrapper (Kinder vom Router).
 
 ⸻
 
-3) JSON-DATEN DEFINIEREN (Schritt 3)
+3) JSON-DATEN DEFINIEREN (Schritt 3 – erledigt)
 
-Für eure Aufgabe müssen folgende Daten per JSON verwaltet werden:
+Alle Datensätze liegen jetzt in `src/data/` und werden zentral über `src/data/index.js` exportiert (inkl. Helpern wie `getProjectById`).
 
-3.1 services.json
-	•	Titel
-	•	Beschreibung
-	•	Icon
-	•	Kategorie
+3.1 `services.json`
+	•	4 Services mit Titel, Beschreibung, Icon-Code (Initialen) & Kategorie  
+	•	`ServicesSection` nutzt `ServiceCard`, so dass auch die Seite `/services` automatisch mitzieht.
 
-3.2 projects.json
-	•	Projektname
-	•	Beschreibung
-	•	Thumbnail
-	•	Tags
-	•	Live-Link (optional)
-	•	Detail-Bilder
+3.2 `projects.json`
+	•	3 Case Studies mit Beschreibung, Tags, Unsplash-Thumbnails, Detailbildern & Live-Link  
+	•	Verwendung in Startseiten-Section, `/projects` Übersicht sowie `/projects/:id`.
 
-3.3 testimonials.json
-	•	Name
-	•	Rolle
-	•	Text
-	•	Rating
-	•	Bild optional
+3.3 `testimonials.json`
+	•	Name, Rolle, Text, Rating (1–5) und Bild-URL  
+	•	`TestimonialCard` mappt die Daten im Grid + zeigt Rating.
 
-→ Diese JSON-Dateien legen wir in src/data/ ab.
+→ Erweiterungen passieren nur über JSON; Komponenten konsumieren alles über das zentrale Data-Layer.
 
 ⸻
 
