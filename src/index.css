@@ -47,3 +47,14 @@ a {
 ::selection {
   background: rgba(14, 165, 233, 0.2);
 }
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
