@@ -19,6 +19,26 @@ function getKpisForProject(project) {
             { label: "Engagement", value: "+74%" },
             { label: "CTR", value: "+29%" },
         ],
+        "b2b-leadgen": [
+            { label: "MQLs", value: "+450" },
+            { label: "SQL Rate", value: "+28%" },
+            { label: "CAC", value: "-42%" },
+        ],
+        "d2c-launch": [
+            { label: "Revenue", value: "+180%" },
+            { label: "AOV", value: "+35%" },
+            { label: "CAC Payback", value: "2.1x" },
+        ],
+        "restaurant-local": [
+            { label: "Foot Traffic", value: "+68%" },
+            { label: "Online Orders", value: "+145%" },
+            { label: "Local Searches", value: "+92%" },
+        ],
+        "employer-branding": [
+            { label: "Applications", value: "+320%" },
+            { label: "Quality Score", value: "+45%" },
+            { label: "Time to Hire", value: "-28%" },
+        ],
     };
 
     return presets[project.id] || [

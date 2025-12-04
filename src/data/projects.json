@@ -34,6 +34,54 @@
       "https://images.unsplash.com/photo-1503341455253-b2e723bb3dbb?auto=format&fit=crop&w=1200&q=80"
     ],
     "liveLink": "https://example.com/fashion"
+  },
+  {
+    "id": "b2b-leadgen",
+    "title": "B2B Lead Generation Campaign",
+    "description": "Multi-Channel Lead-Gen-Strategie mit LinkedIn Ads, Content-Marketing und Marketing-Automation für nachhaltiges Pipeline-Wachstum.",
+    "tags": ["B2B", "Paid Social", "Content", "Marketing Automation"],
+    "thumbnail": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "liveLink": "https://example.com/b2b"
+  },
+  {
+    "id": "d2c-launch",
+    "title": "D2C Beauty Brand Launch",
+    "description": "Vollständiger Marken-Launch mit E-Commerce-Website, Influencer-Partnerships und Performance-Marketing für schnelles Wachstum.",
+    "tags": ["E-Commerce", "Branding", "Influencer", "Paid Social"],
+    "thumbnail": "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=900&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1522338242992-e1a54906a8da?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "liveLink": "https://example.com/d2c"
+  },
+  {
+    "id": "restaurant-local",
+    "title": "Local Awareness – Restaurant Chain",
+    "description": "Hyperlokale Marketing-Kampagne mit Google Ads, Social Media und Community-Building für mehr Foot Traffic und Online-Bestellungen.",
+    "tags": ["Local SEO", "Paid Social", "Content", "Community"],
+    "thumbnail": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "liveLink": "https://example.com/restaurant"
+  },
+  {
+    "id": "employer-branding",
+    "title": "Employer Branding Campaign",
+    "description": "Talent-Acquisition-Strategie mit Employer-Branding-Website, Social-Content und Recruiting-Kampagnen für bessere Bewerberqualität.",
+    "tags": ["Employer Branding", "Content", "Web", "Recruiting"],
+    "thumbnail": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "liveLink": "https://example.com/employer"
   }
 ]
 
