@@ -2,12 +2,14 @@ import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { services } from "../data/index.js";
 import ServiceCard from "../components/cards/ServiceCard.jsx";
+import { useTranslation } from "../hooks/useTranslation.js";
 
 export default function ServicesSection() {
   const [visibleCards, setVisibleCards] = useState(new Set());
   const [isHeaderVisible, setIsHeaderVisible] = useState(false);
   const sectionRef = useRef(null);
   const headerRef = useRef(null);
+  const { t } = useTranslation();
 
   useEffect(() => {
     // Header Animation Observer
@@ -82,15 +84,15 @@ export default function ServicesSection() {
         ref={headerRef}
       >
         <div className="services-header-top">
-          <p className="section-label services-label">What we do</p>
+          <p className="section-label services-label">{t("services.label")}</p>
           <div className="services-stat-badge">
             <span className="services-stat-number">{services.length}</span>
-            <span className="services-stat-label">Services</span>
+            <span className="services-stat-label">{t("services.servicesCount")}</span>
           </div>
         </div>
-        <h2 className="section-title services-title">Services</h2>
+        <h2 className="section-title services-title">{t("services.title")}</h2>
         <p className="section-description services-description">
-          Wir kombinieren Strategie, Design und Technologie, um digitale Erlebnisse zu bauen, die Ergebnisse liefern.
+          {t("services.description")}
         </p>
       </header>
 
@@ -110,7 +112,7 @@ export default function ServicesSection() {
 
       <div className="services-cta">
         <Link to="/contact" className="btn btn-primary services-cta-button">
-          Jetzt Projekt starten
+          {t("services.cta")}
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>

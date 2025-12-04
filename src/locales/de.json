@@ -1,0 +1,200 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "projects": "Projekte",
+    "contact": "Kontakt",
+    "webDevelopment": "Web Development",
+    "socialMedia": "Social Media",
+    "branding": "Branding",
+    "consulting": "Consulting"
+  },
+  "hero": {
+    "title": "Let's grow your brand.",
+    "subtitle": "We create modern websites, social media campaigns and high-impact visuals for ambitious brands.",
+    "cta": "Get in touch"
+  },
+  "portfolio": {
+    "label": "Creative Digital Agency",
+    "title": "We help brands grow with web & social.",
+    "subtitle": "Modern websites, scroll-stopping social content and clear digital strategies for ambitious companies.",
+    "cta": "Get in touch",
+    "viewWork": "View our work",
+    "campaignPerformance": "Campaign Performance",
+    "engagement": "+132% Engagement"
+  },
+  "services": {
+    "label": "What we do",
+    "title": "Services",
+    "description": "Wir kombinieren Strategie, Design und Technologie, um digitale Erlebnisse zu bauen, die Ergebnisse liefern.",
+    "servicesCount": "Services",
+    "cta": "Jetzt Projekt starten",
+    "learnMore": "Mehr erfahren",
+    "pageTitle": "Unser Leistungsportfolio",
+    "pageDescription": "Strategie, Design und Growth Playbooks – zugeschnitten auf ambitionierte Marken.",
+    "categories": {
+      "Strategy": "Strategie",
+      "Experience": "Erfahrung",
+      "Growth": "Wachstum",
+      "Identity": "Identität"
+    },
+    "items": {
+      "strategy": {
+        "title": "Digital Strategy & Positioning",
+        "description": "Workshops, Zielgruppensegmente und Growth Playbooks, damit jede Kampagne auf klaren KPIs basiert."
+      },
+      "web": {
+        "title": "Web Design & Development",
+        "description": "High-Performance Websites und Landing Pages mit Headless CMS, perfektem UX-Flow und messbarer Conversion."
+      },
+      "content": {
+        "title": "Content & Social Media",
+        "description": "Always-on Content-Produktionen, Creator-Kooperationen und Paid-Social-Setups für nachhaltiges Wachstum."
+      },
+      "branding": {
+        "title": "Branding & Visual Systems",
+        "description": "Visuelle Identitäten, Motion Systeme und Brand Guidelines, die in allen Touchpoints funktionieren."
+      }
+    }
+  },
+  "projects": {
+    "label": "Our work",
+    "title": "Selected projects",
+    "description": "Ein Blick in Kampagnen, Websites und Social-Media-Projekte, die wir für unsere Kunden umgesetzt haben.",
+    "viewAll": "Alle Projekte ansehen",
+    "viewDetails": "Details ansehen",
+    "pageTitle": "Case Studies & Projekte",
+    "pageDescription": "Tiefere Einblicke in Launch-Kampagnen, Rebrands und Social-Playbooks, die wir für Kunden umgesetzt haben. Jede Karte zeigt dir auf einen Blick, welche Art von Projekt wir umgesetzt haben – von Branding über Performance bis Always-on Social.",
+    "meta": "ausgewählte Projekte · laufend aktualisiert · echte Beispiele aus Markenarbeit & Kampagnen.",
+    "filterAll": "Alle",
+    "sortLabel": "Sortieren:",
+    "sortRecommended": "Empfohlen",
+    "sortTitle": "Titel A–Z",
+    "viewCaseStudy": "Case Study ansehen",
+    "viewProject": "Projekt ansehen",
+    "projectDescriptionSuffix": "Wir zeigen dir die Ausgangssituation, unseren Ansatz und die Ergebnisse in einer kompakten Case Study.",
+    "openLive": "Live-Projekt öffnen",
+    "setupLearnings": "Setup & Learnings",
+    "backToOverview": "Zurück zur Übersicht",
+    "notFound": "Projekt nicht gefunden",
+    "notFoundDescription": "Das angefragte Projekt existiert nicht oder wurde entfernt. Bitte wähle eines unserer anderen Projekte aus.",
+    "planProject": "Eigenes Projekt mit uns planen",
+    "caseStudy": "Case Study",
+    "viewLiveProject": "Live-Projekt ansehen",
+    "brandExperience": "Brand Experience",
+    "performance": "Performance",
+    "tags": {
+      "Web": "Web",
+      "Paid Social": "Paid Social",
+      "Content": "Content",
+      "Branding": "Branding",
+      "Social": "Social",
+      "Influencer": "Influencer"
+    },
+    "items": {
+      "saas-launch": {
+        "title": "Launch Campaign – SaaS Startup",
+        "description": "Full funnel launch mit Landing Page, Paid Social Ads und Conversion-optimiertem Content."
+      },
+      "coffee-rebrand": {
+        "title": "Rebrand – Local Coffee Chain",
+        "description": "Neue digitale Brand Experience inkl. Website, Packaging und Social Templates."
+      },
+      "fashion-social": {
+        "title": "Always-on Social – Fashion Brand",
+        "description": "Content-Plan, Reels-Produktion und Creator Collabs für nachhaltiges Wachstum."
+      }
+    }
+  },
+  "testimonials": {
+    "label": "What our clients say",
+    "title": "Testimonials",
+    "description": "Echte Erfahrungen von Kunden, die mit uns erfolgreiche digitale Projekte umgesetzt haben.",
+    "average": "Durchschnitt",
+    "ratingLabel": "Bewertung {rating} von 5",
+    "roles": {
+      "Founder, DTC Brand": "Gründerin, DTC Brand",
+      "CEO, SaaS Startup": "CEO, SaaS Startup",
+      "Head of Marketing, Retail": "Head of Marketing, Retail"
+    },
+    "items": {
+      "anna-k": {
+        "text": "Hype Media hat unseren Launch in Rekordzeit orchestriert – Funnel, Creatives und Site Conversion passen endlich zusammen."
+      },
+      "jonas-m": {
+        "text": "Super klarer Prozess: Sprint-Boards, wöchentliche Reviews und Assets, die unser Sales-Team sofort nutzen konnte."
+      },
+      "leila-s": {
+        "text": "Wir haben unsere Social-Wachstumsziele um +80% übertroffen. Besonders stark: das Creator-Playbook und die Paid-Optimierung."
+      }
+    }
+  },
+  "contact": {
+    "label": "Kontakt",
+    "title": "Lass uns über dein Projekt sprechen",
+    "description": "Buche uns für Launches, Rebrands oder Always-on Content. Wir antworten innerhalb von 24 Stunden.",
+    "formTitle": "Stellen Sie uns eine Anfrage",
+    "formDescription": "Erzählen Sie uns kurz von Ihrem Projekt – wir melden uns mit einer Einschätzung zurück.",
+    "firstName": "Vorname",
+    "lastName": "Nachname",
+    "email": "E‑Mail Adresse",
+    "phone": "Telefonnummer",
+    "budget": "Budget",
+    "message": "Projektbeschreibung",
+    "optional": "(optional)",
+    "required": "*",
+    "firstNamePlaceholder": "Max",
+    "lastNamePlaceholder": "Mustermann",
+    "emailPlaceholder": "max.mustermann@example.com",
+    "phonePlaceholder": "+49 123 456789",
+    "budgetSelect": "Budget auswählen",
+    "budgetUnder5k": "Unter 5.000 €",
+    "budget5k15k": "5.000–15.000 €",
+    "budget15kPlus": "15.000 € +",
+    "messagePlaceholder": "Bitte geben Sie uns Details Ihres Projekts an...",
+    "submitting": "Wird gesendet...",
+    "submit": "Anfrage senden",
+    "success": "Danke für deine Anfrage – wir melden uns bald bei Ihnen!",
+    "servicesLabel": "Leistungen",
+    "servicesTitle": "Was wir für dich umsetzen",
+    "servicesDescription": "Websites, Social Media, Kampagnen und Branding – wir schnüren dir ein Paket, das zu deinem Budget und deiner Zielgruppe passt.",
+    "consultingLabel": "Beratung",
+    "consultingTitle": "Kompetente Einschätzung vorab",
+    "consultingDescription": "Wir hören zu, stellen die richtigen Fragen und geben dir eine ehrliche Empfehlung, welche Maßnahmen wirklich sinnvoll sind.",
+    "supportLabel": "Support",
+    "supportTitle": "Begleitung bestehender Projekte",
+    "supportDescription": "Du hast bereits mit uns gearbeitet? Wir unterstützen dich bei Optimierungen, Erweiterungen und laufender Betreuung."
+  },
+  "footer": {
+    "tagline": "Progressive Digital Experiences for Ambitious Brands.",
+    "services": "Services",
+    "company": "Unternehmen",
+    "copyright": "Alle Rechte vorbehalten.",
+    "socialMedia": {
+      "linkedin": "LinkedIn",
+      "twitter": "Twitter",
+      "instagram": "Instagram"
+    }
+  },
+  "common": {
+    "scrollToTop": "Scroll to top"
+  },
+  "notFound": {
+    "label": "404",
+    "title": "Seite nicht gefunden",
+    "description": "Die gesuchte Seite existiert nicht. Nutze die Navigation oder spring direkt zurück zur Startseite.",
+    "backToHome": "Zurück zur Startseite"
+  },
+  "kpis": {
+    "leads": "Leads",
+    "roas": "ROAS",
+    "cpl": "CPL",
+    "storeVisits": "Store Visits",
+    "brandRecall": "Brand Recall",
+    "socialFollower": "Social Follower",
+    "reach": "Reach",
+    "engagement": "Engagement",
+    "ctr": "CTR"
+  }
+}
+

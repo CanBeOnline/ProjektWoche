@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { testimonials } from "../data/index.js";
 import TestimonialCard from "../components/cards/TestimonialCard.jsx";
+import { useTranslation } from "../hooks/useTranslation.js";
 
 export default function TestimonialsSection() {
   const [visibleCards, setVisibleCards] = useState(new Set());
@@ -8,8 +9,10 @@ export default function TestimonialsSection() {
   const sectionRef = useRef(null);
   const headerRef = useRef(null);
 
+  const { t } = useTranslation();
+  
   // Calculate average rating
-  const averageRating = testimonials.reduce((sum, t) => sum + (t.rating || 0), 0) / testimonials.length;
+  const averageRating = testimonials.reduce((sum, testimonial) => sum + (testimonial.rating || 0), 0) / testimonials.length;
 
   useEffect(() => {
     // Header Animation Observer
@@ -84,18 +87,18 @@ export default function TestimonialsSection() {
         ref={headerRef}
       >
         <div className="testimonials-header-top">
-          <p className="section-label testimonials-label">What our clients say</p>
+          <p className="section-label testimonials-label">{t("testimonials.label")}</p>
           <div className="testimonials-stat-badge">
             <span className="testimonials-stat-rating">{averageRating.toFixed(1)}</span>
             <div className="testimonials-stat-stars">
               {"★".repeat(Math.round(averageRating))}
             </div>
-            <span className="testimonials-stat-label">Durchschnitt</span>
+            <span className="testimonials-stat-label">{t("testimonials.average")}</span>
           </div>
         </div>
-        <h2 className="section-title testimonials-title">Testimonials</h2>
+        <h2 className="section-title testimonials-title">{t("testimonials.title")}</h2>
         <p className="section-description testimonials-description">
-          Echte Erfahrungen von Kunden, die mit uns erfolgreiche digitale Projekte umgesetzt haben.
+          {t("testimonials.description")}
         </p>
       </header>
 

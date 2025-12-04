@@ -1,20 +1,22 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from "../../hooks/useTranslation.js";
 
 const FOOTER_LINKS = {
   services: [
-    { label: "Web Development", to: "/services" },
-    { label: "Social Media", to: "/services" },
-    { label: "Branding", to: "/services" },
-    { label: "Consulting", to: "/services" },
+    { key: "webDevelopment", to: "/services" },
+    { key: "socialMedia", to: "/services" },
+    { key: "branding", to: "/services" },
+    { key: "consulting", to: "/services" },
   ],
   company: [
-    { label: "Home", to: "/" },
-    { label: "Projects", to: "/projects" },
-    { label: "Contact", to: "/contact" },
+    { key: "home", to: "/" },
+    { key: "projects", to: "/projects" },
+    { key: "contact", to: "/contact" },
   ],
 };
 
 export default function Footer() {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -26,14 +28,14 @@ export default function Footer() {
             Hype Media
           </Link>
           <p className="footer-tagline">
-            Progressive Digital Experiences for Ambitious Brands.
+            {t("footer.tagline")}
           </p>
           {/* Social Media Links */}
           <div className="footer-social">
             <a
               href="#"
               className="footer-social-link"
-              aria-label="LinkedIn"
+              aria-label={t("footer.socialMedia.linkedin")}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -44,7 +46,7 @@ export default function Footer() {
             <a
               href="#"
               className="footer-social-link"
-              aria-label="Twitter"
+              aria-label={t("footer.socialMedia.twitter")}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -55,7 +57,7 @@ export default function Footer() {
             <a
               href="#"
               className="footer-social-link"
-              aria-label="Instagram"
+              aria-label={t("footer.socialMedia.instagram")}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -69,12 +71,12 @@ export default function Footer() {
         {/* Links Sections */}
         <div className="footer-links">
           <div className="footer-column">
-            <h3 className="footer-heading">Services</h3>
+            <h3 className="footer-heading">{t("footer.services")}</h3>
             <ul className="footer-list">
               {FOOTER_LINKS.services.map((link) => (
-                <li key={link.label}>
+                <li key={link.key}>
                   <Link to={link.to} className="footer-link">
-                    {link.label}
+                    {t(`nav.${link.key}`)}
                   </Link>
                 </li>
               ))}
@@ -82,12 +84,12 @@ export default function Footer() {
           </div>
 
           <div className="footer-column">
-            <h3 className="footer-heading">Company</h3>
+            <h3 className="footer-heading">{t("footer.company")}</h3>
             <ul className="footer-list">
               {FOOTER_LINKS.company.map((link) => (
-                <li key={link.label}>
+                <li key={link.key}>
                   <Link to={link.to} className="footer-link">
-                    {link.label}
+                    {t(`nav.${link.key}`)}
                   </Link>
                 </li>
               ))}
@@ -99,7 +101,7 @@ export default function Footer() {
       {/* Copyright */}
       <div className="footer-bottom">
         <p className="footer-copyright">
-          © {currentYear} Hype Media Agency. All rights reserved.
+          © {currentYear} Hype Media Agency. {t("footer.copyright")}
         </p>
       </div>
     </footer>

@@ -1,30 +1,31 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { projects } from "../data/index.js";
+import { useTranslation } from "../hooks/useTranslation.js";
 
-function getKpisForProject(project) {
+function getKpisForProject(project, t) {
     const presets = {
         "saas-launch": [
-            { label: "Leads", value: "+1.2k" },
-            { label: "ROAS", value: "3.1x" },
-            { label: "CPL", value: "-38%" },
+            { label: t("kpis.leads"), value: "+1.2k" },
+            { label: t("kpis.roas"), value: "3.1x" },
+            { label: t("kpis.cpl"), value: "-38%" },
         ],
         "coffee-rebrand": [
-            { label: "Store Visits", value: "+52%" },
-            { label: "Brand Recall", value: "+31%" },
-            { label: "Social Follower", value: "+8.4k" },
+            { label: t("kpis.storeVisits"), value: "+52%" },
+            { label: t("kpis.brandRecall"), value: "+31%" },
+            { label: t("kpis.socialFollower"), value: "+8.4k" },
         ],
         "fashion-social": [
-            { label: "Reach", value: "+220%" },
-            { label: "Engagement", value: "+74%" },
-            { label: "CTR", value: "+29%" },
+            { label: t("kpis.reach"), value: "+220%" },
+            { label: t("kpis.engagement"), value: "+74%" },
+            { label: t("kpis.ctr"), value: "+29%" },
         ],
     };
 
     return presets[project.id] || [
-        { label: "Reach", value: "+120%" },
-        { label: "CTR", value: "+24%" },
-        { label: "Leads", value: "+600" },
+        { label: t("kpis.reach"), value: "+120%" },
+        { label: t("kpis.ctr"), value: "+24%" },
+        { label: t("kpis.leads"), value: "+600" },
     ];
 }
 
@@ -34,6 +35,7 @@ function getVariant(index) {
 }
 
 export default function Projects() {
+    const { t } = useTranslation();
     const [selectedTag, setSelectedTag] = useState("all");
     const [sortBy, setSortBy] = useState("recommended");
 
@@ -62,15 +64,13 @@ export default function Projects() {
     return (
         <section id="projects" className="section projects">
             <header className="section-header projects-intro">
-                <p className="section-label">Our work</p>
-                <h1 className="section-title">Case Studies & Projekte</h1>
+                <p className="section-label">{t("projects.label")}</p>
+                <h1 className="section-title">{t("projects.pageTitle")}</h1>
                 <p className="section-description">
-                    Tiefere Einblicke in Launch-Kampagnen, Rebrands und Social-Playbooks, die wir für Kunden umgesetzt haben.
-                    Jede Karte zeigt dir auf einen Blick, welche Art von Projekt wir umgesetzt haben – von Branding über Performance
-                    bis Always-on Social.
+                    {t("projects.pageDescription")}
                 </p>
                 <p className="projects-meta">
-                    {projects.length} ausgewählte Projekte · laufend aktualisiert · echte Beispiele aus Markenarbeit & Kampagnen.
+                    {projects.length} {t("projects.meta")}
                 </p>
             </header>
 
@@ -81,7 +81,7 @@ export default function Projects() {
                         className={`btn btn-sm ${selectedTag === "all" ? "btn-primary" : "btn-outline-secondary"}`}
                         onClick={() => setSelectedTag("all")}
                     >
-                        Alle
+                        {t("projects.filterAll")}
                     </button>
                     {allTags.map((tag) => (
                         <button
@@ -97,7 +97,7 @@ export default function Projects() {
 
                 <div className="projects-sort d-flex align-items-center gap-2">
                     <label htmlFor="project-sort" className="projects-sort-label">
-                        Sortieren:
+                        {t("projects.sortLabel")}
                     </label>
                     <select
                         id="project-sort"
@@ -105,8 +105,8 @@ export default function Projects() {
                         value={sortBy}
                         onChange={(event) => setSortBy(event.target.value)}
                     >
-                        <option value="recommended">Empfohlen</option>
-                        <option value="title">Titel A–Z</option>
+                        <option value="recommended">{t("projects.sortRecommended")}</option>
+                        <option value="title">{t("projects.sortTitle")}</option>
                     </select>
                 </div>
             </div>
@@ -115,38 +115,43 @@ export default function Projects() {
                 {visibleProjects.map((project, index) => {
                     const forceVisual = project.id === "fashion-social" || project.id === "restaurant-local";
                     const variant = forceVisual ? "visual" : getVariant(index);
-                    const kpis = getKpisForProject(project);
+                    const kpis = getKpisForProject(project, t);
+                    
+                    // Übersetzungen für Projekt-Daten
+                    const projectTitle = t(`projects.items.${project.id}.title`, project.title);
+                    const projectDescription = t(`projects.items.${project.id}.description`, project.description);
+                    const translatedTags = project.tags?.map(tag => t(`projects.tags.${tag}`, tag));
 
                     if (variant === "visual") {
                         return (
                             <article
                                 key={project.id}
                                 className="project-card project-card--visual"
-                                aria-label={`Projekt ${project.title}`}
+                                aria-label={`${t("projects.caseStudy")} ${projectTitle}`}
                             >
                                 <div className="project-thumb-wrapper">
                                     <img
                                         src={project.thumbnail}
-                                        alt={project.title}
+                                        alt={projectTitle}
                                         className="project-thumb"
                                         loading="lazy"
                                     />
-                                    <span className="project-pill">Brand Experience</span>
+                                    <span className="project-pill">{t("projects.brandExperience")}</span>
                                 </div>
                                 <div className="project-card-body">
-                                    <p className="project-meta">{project.tags?.join(" · ")}</p>
-                                    <h3>{project.title}</h3>
-                                    <p className="project-text">{project.description}</p>
+                                    <p className="project-meta">{translatedTags?.join(" · ")}</p>
+                                    <h3>{projectTitle}</h3>
+                                    <p className="project-text">{projectDescription}</p>
                                     <div className="tag-list">
                                         {project.tags?.map((tag) => (
                                             <span key={tag} className="tag">
-                                                {tag}
+                                                {t(`projects.tags.${tag}`, tag)}
                                             </span>
                                         ))}
                                     </div>
                                     <div className="project-actions">
                                         <Link className="btn btn-primary" to={`/projects/${project.id}`}>
-                                            Case Study ansehen
+                                            {t("projects.viewCaseStudy")}
                                         </Link>
                                         {project.liveLink && (
                                             <a
@@ -155,7 +160,7 @@ export default function Projects() {
                                                 rel="noreferrer"
                                                 className="project-link"
                                             >
-                                                Live-Projekt öffnen
+                                                {t("projects.openLive")}
                                             </a>
                                         )}
                                     </div>
@@ -169,15 +174,15 @@ export default function Projects() {
                             <article
                                 key={project.id}
                                 className="project-card project-card--kpi"
-                                aria-label={`Projekt ${project.title}`}
+                                aria-label={`${t("projects.caseStudy")} ${projectTitle}`}
                             >
                                 <div className="project-card-body project-card-body--kpi">
-                                    <span className="project-badge">Performance</span>
+                                    <span className="project-badge">{t("projects.performance")}</span>
                                     <div className="project-meta-row">
-                                        <span className="project-meta">{project.tags?.join(" · ")}</span>
+                                        <span className="project-meta">{translatedTags?.join(" · ")}</span>
                                     </div>
-                                    <h3>{project.title}</h3>
-                                    <p className="project-text">{project.description}</p>
+                                    <h3>{projectTitle}</h3>
+                                    <p className="project-text">{projectDescription}</p>
                                     <div className="project-kpi-row">
                                         {kpis.map((kpi) => (
                                             <div key={kpi.label} className="project-kpi">
@@ -188,7 +193,7 @@ export default function Projects() {
                                     </div>
                                     <div className="project-actions">
                                         <Link className="btn btn-primary" to={`/projects/${project.id}`}>
-                                            Setup & Learnings
+                                            {t("projects.setupLearnings")}
                                         </Link>
                                     </div>
                                 </div>
@@ -200,34 +205,33 @@ export default function Projects() {
                         <article
                             key={project.id}
                             className="project-card project-card--story"
-                            aria-label={`Projekt ${project.title}`}
+                            aria-label={`${t("projects.caseStudy")} ${projectTitle}`}
                         >
                             <div className="project-thumb-wrapper">
                                 <img
                                     src={project.thumbnail}
-                                    alt={project.title}
+                                    alt={projectTitle}
                                     className="project-thumb"
                                     loading="lazy"
                                 />
-                                <span className="project-pill">Case Study</span>
+                                <span className="project-pill">{t("projects.caseStudy")}</span>
                             </div>
                             <div className="project-card-body">
-                                <p className="project-meta">{project.tags?.join(" · ")}</p>
-                                <h3>{project.title}</h3>
+                                <p className="project-meta">{translatedTags?.join(" · ")}</p>
+                                <h3>{projectTitle}</h3>
                                 <p className="project-text">
-                                    {project.description} Wir zeigen dir die Ausgangssituation, unseren Ansatz und die
-                                    Ergebnisse in einer kompakten Case Study.
+                                    {projectDescription} {t("projects.projectDescriptionSuffix")}
                                 </p>
                                 <div className="tag-list">
                                     {project.tags?.map((tag) => (
                                         <span key={tag} className="tag">
-                                            {tag}
+                                            {t(`projects.tags.${tag}`, tag)}
                                         </span>
                                     ))}
                                 </div>
                                 <div className="project-actions">
                                     <Link className="btn btn-primary" to={`/projects/${project.id}`}>
-                                        Projekt ansehen
+                                        {t("projects.viewProject")}
                                     </Link>
                                 </div>
                             </div>
@@ -238,7 +242,7 @@ export default function Projects() {
 
             <div className="section-cta">
                 <Link className="btn btn-primary" to="/contact">
-                    Eigenes Projekt mit uns planen
+                    {t("projects.planProject")}
                 </Link>
             </div>
         </section>

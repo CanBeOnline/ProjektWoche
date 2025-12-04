@@ -1,14 +1,17 @@
 import ServicesSection from "../sections/ServicesSection.jsx";
+import { useTranslation } from "../hooks/useTranslation.js";
 
 export default function Services() {
+  const { t } = useTranslation();
+
   return (
     <>
       <section className="section">
         <header className="section-header">
-          <p className="section-label">Services</p>
-          <h1 className="section-title">Unser Leistungsportfolio</h1>
+          <p className="section-label">{t("services.title")}</p>
+          <h1 className="section-title">{t("services.pageTitle")}</h1>
           <p className="section-description">
-            Strategie, Design und Growth Playbooks – zugeschnitten auf ambitionierte Marken.
+            {t("services.pageDescription")}
           </p>
         </header>
       </section>

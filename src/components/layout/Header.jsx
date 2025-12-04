@@ -1,16 +1,20 @@
 import { useState, useEffect } from "react";
 import { NavLink, Link } from "react-router-dom";
+import { useLanguage } from "../../context/LanguageContext.jsx";
+import { useTranslation } from "../../hooks/useTranslation.js";
 
 const NAV_ITEMS = [
-  { label: "Home", to: "/" },
-  { label: "Services", to: "/services" },
-  { label: "Projects", to: "/projects" },
-  { label: "Contact", to: "/contact" },
+  { key: "home", to: "/" },
+  { key: "services", to: "/services" },
+  { key: "projects", to: "/projects" },
+  { key: "contact", to: "/contact" },
 ];
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { language, toggleLanguage } = useLanguage();
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,10 +50,20 @@ export default function Header() {
                 `nav-link ${isActive ? "nav-active" : ""}`
               }
             >
-              {item.label}
+              {t(`nav.${item.key}`)}
             </NavLink>
           ))}
         </nav>
+
+        {/* Language Toggle Button */}
+        <button
+          className="language-toggle"
+          onClick={toggleLanguage}
+          aria-label={`Switch to ${language === "de" ? "English" : "Deutsch"}`}
+          title={`Switch to ${language === "de" ? "English" : "Deutsch"}`}
+        >
+          {language === "de" ? "EN" : "DE"}
+        </button>
 
         {/* Mobile Hamburger Button */}
         <button
@@ -75,9 +89,19 @@ export default function Header() {
             }
             onClick={closeMobileMenu}
           >
-            {item.label}
+            {t(`nav.${item.key}`)}
           </NavLink>
         ))}
+        <button
+          className="language-toggle language-toggle-mobile"
+          onClick={() => {
+            toggleLanguage();
+            closeMobileMenu();
+          }}
+          aria-label={`Switch to ${language === "de" ? "English" : "Deutsch"}`}
+        >
+          {language === "de" ? "EN" : "DE"}
+        </button>
       </nav>
 
       {/* Mobile Menu Overlay */}

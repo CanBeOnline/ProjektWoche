@@ -1,17 +1,20 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from "../hooks/useTranslation.js";
 
 export default function NotFound() {
+    const { t } = useTranslation();
+
     return (
         <section className="section not-found">
             <header className="section-header">
-                <p className="section-label">404</p>
-                <h1 className="section-title">Seite nicht gefunden</h1>
+                <p className="section-label">{t("notFound.label")}</p>
+                <h1 className="section-title">{t("notFound.title")}</h1>
                 <p className="section-description">
-                    Die gesuchte Seite existiert nicht. Nutze die Navigation oder spring direkt zurück zur Startseite.
+                    {t("notFound.description")}
                 </p>
             </header>
             <Link className="btn btn-primary" to="/">
-                Zurück zur Startseite
+                {t("notFound.backToHome")}
             </Link>
         </section>
     );

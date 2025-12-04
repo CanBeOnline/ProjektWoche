@@ -1,16 +1,25 @@
+import { useTranslation } from "../../hooks/useTranslation.js";
+
 export default function TestimonialCard({ testimonial }) {
+  const { t } = useTranslation();
   const rating = testimonial.rating || 0;
   const ratingClass = rating === 5 ? "rating-5" : rating === 4 ? "rating-4" : "rating-3";
+
+  // Übersetzungen für Testimonial-Daten
+  const testimonialText = t(`testimonials.items.${testimonial.id}.text`, testimonial.text);
+  const roleLabel = t(`testimonials.roles.${testimonial.role}`, testimonial.role);
+  const ratingLabelTemplate = t("testimonials.ratingLabel", `Rating {rating} out of 5`);
+  const ratingLabel = ratingLabelTemplate.replace("{rating}", rating.toString());
 
   return (
     <article className="testimonial-card">
       <div className="testimonial-quote-mark" aria-hidden="true">"</div>
       
       <div className="testimonial-content">
-        <p className="testimonial-text">{testimonial.text}</p>
+        <p className="testimonial-text">{testimonialText}</p>
         
         {rating > 0 && (
-          <div className={`testimonial-rating ${ratingClass}`} aria-label={`Rating ${rating} von 5`}>
+          <div className={`testimonial-rating ${ratingClass}`} aria-label={ratingLabel}>
             {Array.from({ length: 5 }, (_, i) => (
               <svg
                 key={i}
@@ -39,7 +48,7 @@ export default function TestimonialCard({ testimonial }) {
           )}
           <div className="testimonial-author-info">
             <p className="testimonial-author">{testimonial.name}</p>
-            <p className="testimonial-role">{testimonial.role}</p>
+            <p className="testimonial-role">{roleLabel}</p>
           </div>
         </div>
       </div>

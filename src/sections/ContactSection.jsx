@@ -1,7 +1,9 @@
 // src/sections/ContactSection.jsx
 import { useState } from "react";
+import { useTranslation } from "../hooks/useTranslation.js";
 
 export default function ContactSection() {
+  const { t } = useTranslation();
   const [form, setForm] = useState({
     firstName: "",
     lastName: "",
@@ -32,7 +34,7 @@ export default function ContactSection() {
     await new Promise((resolve) => setTimeout(resolve, 1000));
     
     console.log("Contact form submitted:", form);
-    alert("Danke für deine Anfrage – wir melden uns bald bei Ihnen!");
+    alert(t("contact.success"));
     
     setIsSubmitting(false);
     // Optional: Formular zurücksetzen
@@ -42,10 +44,10 @@ export default function ContactSection() {
   return (
     <section id="contact" className="section contact">
       <header className="section-header">
-        <p className="section-label">Kontakt</p>
-        <h2 className="section-title">Stellen Sie uns eine Anfrage</h2>
+        <p className="section-label">{t("contact.label")}</p>
+        <h2 className="section-title">{t("contact.formTitle")}</h2>
         <p className="section-description">
-          Erzählen Sie uns kurz von Ihrem Projekt – wir melden uns mit einer Einschätzung zurück.
+          {t("contact.formDescription")}
         </p>
       </header>
 
@@ -53,12 +55,12 @@ export default function ContactSection() {
         <div className="contact-form-row-grid">
           <div className="form-row">
             <label htmlFor="firstName">
-              Vorname <span style={{ color: "var(--color-error-500)" }}>*</span>
+              {t("contact.firstName")} <span style={{ color: "var(--color-error-500)" }}>{t("contact.required")}</span>
               <input
                 id="firstName"
                 name="firstName"
                 type="text"
-                placeholder="Max"
+                placeholder={t("contact.firstNamePlaceholder")}
                 value={form.firstName}
                 onChange={handleChange}
                 required
@@ -68,12 +70,12 @@ export default function ContactSection() {
 
           <div className="form-row">
             <label htmlFor="lastName">
-              Nachname <span style={{ color: "var(--color-error-500)" }}>*</span>
+              {t("contact.lastName")} <span style={{ color: "var(--color-error-500)" }}>{t("contact.required")}</span>
               <input
                 id="lastName"
                 name="lastName"
                 type="text"
-                placeholder="Mustermann"
+                placeholder={t("contact.lastNamePlaceholder")}
                 value={form.lastName}
                 onChange={handleChange}
                 required
@@ -85,12 +87,12 @@ export default function ContactSection() {
         <div className="contact-form-row-grid">
           <div className="form-row">
             <label htmlFor="email">
-              E‑Mail Adresse <span style={{ color: "var(--color-error-500)" }}>*</span>
+              {t("contact.email")} <span style={{ color: "var(--color-error-500)" }}>{t("contact.required")}</span>
               <input
                 id="email"
                 name="email"
                 type="email"
-                placeholder="max.mustermann@example.com"
+                placeholder={t("contact.emailPlaceholder")}
                 value={form.email}
                 onChange={handleChange}
                 required
@@ -100,15 +102,15 @@ export default function ContactSection() {
 
           <div className="form-row">
             <label htmlFor="phone">
-              Telefonnummer{" "}
+              {t("contact.phone")}{" "}
               <span style={{ color: "var(--color-text-muted)", fontSize: "var(--text-xs)" }}>
-                (optional)
+                {t("contact.optional")}
               </span>
               <input
                 id="phone"
                 name="phone"
                 type="tel"
-                placeholder="+49 123 456789"
+                placeholder={t("contact.phonePlaceholder")}
                 value={form.phone}
                 onChange={handleChange}
               />
@@ -118,9 +120,9 @@ export default function ContactSection() {
 
         <div className="form-row">
           <label htmlFor="budget">
-            Budget{" "}
+            {t("contact.budget")}{" "}
             <span style={{ color: "var(--color-text-muted)", fontSize: "var(--text-xs)" }}>
-              (optional)
+              {t("contact.optional")}
             </span>
             <select
               id="budget"
@@ -128,22 +130,22 @@ export default function ContactSection() {
               value={form.budget}
               onChange={handleChange}
             >
-              <option value="">Budget auswählen</option>
-              <option value="under5k">Unter 5.000 €</option>
-              <option value="5k-15k">5.000–15.000 €</option>
-              <option value="15k-plus">15.000 € +</option>
+              <option value="">{t("contact.budgetSelect")}</option>
+              <option value="under5k">{t("contact.budgetUnder5k")}</option>
+              <option value="5k-15k">{t("contact.budget5k15k")}</option>
+              <option value="15k-plus">{t("contact.budget15kPlus")}</option>
             </select>
           </label>
         </div>
 
         <div className="form-row">
           <label htmlFor="message">
-            Projektbeschreibung <span style={{ color: "var(--color-error-500)" }}>*</span>
+            {t("contact.message")} <span style={{ color: "var(--color-error-500)" }}>{t("contact.required")}</span>
             <textarea
               id="message"
               name="message"
               rows="6"
-              placeholder="Bitte geben Sie uns Details Ihres Projekts an..."
+              placeholder={t("contact.messagePlaceholder")}
               value={form.message}
               onChange={handleChange}
               required
@@ -157,7 +159,7 @@ export default function ContactSection() {
             disabled={!isFormValid || isSubmitting}
             className="btn btn-primary"
           >
-            {isSubmitting ? "Wird gesendet..." : "Anfrage senden"}
+            {isSubmitting ? t("contact.submitting") : t("contact.submit")}
           </button>
         </div>
       </form>

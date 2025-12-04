@@ -1,0 +1,200 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "projects": "Projects",
+    "contact": "Contact",
+    "webDevelopment": "Web Development",
+    "socialMedia": "Social Media",
+    "branding": "Branding",
+    "consulting": "Consulting"
+  },
+  "hero": {
+    "title": "Let's grow your brand.",
+    "subtitle": "We create modern websites, social media campaigns and high-impact visuals for ambitious brands.",
+    "cta": "Get in touch"
+  },
+  "portfolio": {
+    "label": "Creative Digital Agency",
+    "title": "We help brands grow with web & social.",
+    "subtitle": "Modern websites, scroll-stopping social content and clear digital strategies for ambitious companies.",
+    "cta": "Get in touch",
+    "viewWork": "View our work",
+    "campaignPerformance": "Campaign Performance",
+    "engagement": "+132% Engagement"
+  },
+  "services": {
+    "label": "What we do",
+    "title": "Services",
+    "description": "We combine strategy, design and technology to build digital experiences that deliver results.",
+    "servicesCount": "Services",
+    "cta": "Start your project now",
+    "learnMore": "Learn more",
+    "pageTitle": "Our Service Portfolio",
+    "pageDescription": "Strategy, design and growth playbooks – tailored to ambitious brands.",
+    "categories": {
+      "Strategy": "Strategy",
+      "Experience": "Experience",
+      "Growth": "Growth",
+      "Identity": "Identity"
+    },
+    "items": {
+      "strategy": {
+        "title": "Digital Strategy & Positioning",
+        "description": "Workshops, target audience segments and growth playbooks so every campaign is based on clear KPIs."
+      },
+      "web": {
+        "title": "Web Design & Development",
+        "description": "High-performance websites and landing pages with headless CMS, perfect UX flow and measurable conversion."
+      },
+      "content": {
+        "title": "Content & Social Media",
+        "description": "Always-on content productions, creator collaborations and paid social setups for sustainable growth."
+      },
+      "branding": {
+        "title": "Branding & Visual Systems",
+        "description": "Visual identities, motion systems and brand guidelines that work across all touchpoints."
+      }
+    }
+  },
+  "projects": {
+    "label": "Our work",
+    "title": "Selected projects",
+    "description": "A look at campaigns, websites and social media projects we've implemented for our clients.",
+    "viewAll": "View all projects",
+    "viewDetails": "View details",
+    "pageTitle": "Case Studies & Projects",
+    "pageDescription": "Deeper insights into launch campaigns, rebrands and social playbooks we've implemented for clients. Each card shows you at a glance what type of project we've implemented – from branding to performance to always-on social.",
+    "meta": "selected projects · continuously updated · real examples from brand work & campaigns.",
+    "filterAll": "All",
+    "sortLabel": "Sort by:",
+    "sortRecommended": "Recommended",
+    "sortTitle": "Title A–Z",
+    "viewCaseStudy": "View case study",
+    "viewProject": "View project",
+    "projectDescriptionSuffix": "We show you the starting situation, our approach and the results in a compact case study.",
+    "openLive": "Open live project",
+    "setupLearnings": "Setup & Learnings",
+    "backToOverview": "Back to overview",
+    "notFound": "Project not found",
+    "notFoundDescription": "The requested project does not exist or has been removed. Please choose one of our other projects.",
+    "planProject": "Plan your own project with us",
+    "caseStudy": "Case Study",
+    "viewLiveProject": "View live project",
+    "brandExperience": "Brand Experience",
+    "performance": "Performance",
+    "tags": {
+      "Web": "Web",
+      "Paid Social": "Paid Social",
+      "Content": "Content",
+      "Branding": "Branding",
+      "Social": "Social",
+      "Influencer": "Influencer"
+    },
+    "items": {
+      "saas-launch": {
+        "title": "Launch Campaign – SaaS Startup",
+        "description": "Full funnel launch with landing page, paid social ads and conversion-optimized content."
+      },
+      "coffee-rebrand": {
+        "title": "Rebrand – Local Coffee Chain",
+        "description": "New digital brand experience including website, packaging and social templates."
+      },
+      "fashion-social": {
+        "title": "Always-on Social – Fashion Brand",
+        "description": "Content plan, reels production and creator collaborations for sustainable growth."
+      }
+    }
+  },
+  "testimonials": {
+    "label": "What our clients say",
+    "title": "Testimonials",
+    "description": "Real experiences from clients who have successfully implemented digital projects with us.",
+    "average": "Average",
+    "ratingLabel": "Rating {rating} out of 5",
+    "roles": {
+      "Founder, DTC Brand": "Founder, DTC Brand",
+      "CEO, SaaS Startup": "CEO, SaaS Startup",
+      "Head of Marketing, Retail": "Head of Marketing, Retail"
+    },
+    "items": {
+      "anna-k": {
+        "text": "Hype Media orchestrated our launch in record time – funnel, creatives and site conversion finally fit together."
+      },
+      "jonas-m": {
+        "text": "Super clear process: sprint boards, weekly reviews and assets that our sales team could use immediately."
+      },
+      "leila-s": {
+        "text": "We exceeded our social growth goals by +80%. Particularly strong: the creator playbook and paid optimization."
+      }
+    }
+  },
+  "contact": {
+    "label": "Contact",
+    "title": "Let's talk about your project",
+    "description": "Book us for launches, rebrands or always-on content. We respond within 24 hours.",
+    "formTitle": "Send us a request",
+    "formDescription": "Tell us briefly about your project – we'll get back to you with an assessment.",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "email": "Email address",
+    "phone": "Phone number",
+    "budget": "Budget",
+    "message": "Project description",
+    "optional": "(optional)",
+    "required": "*",
+    "firstNamePlaceholder": "John",
+    "lastNamePlaceholder": "Doe",
+    "emailPlaceholder": "john.doe@example.com",
+    "phonePlaceholder": "+1 234 567890",
+    "budgetSelect": "Select budget",
+    "budgetUnder5k": "Under €5,000",
+    "budget5k15k": "€5,000–15,000",
+    "budget15kPlus": "€15,000+",
+    "messagePlaceholder": "Please provide us with details about your project...",
+    "submitting": "Sending...",
+    "submit": "Send request",
+    "success": "Thanks for your request – we'll get back to you soon!",
+    "servicesLabel": "Services",
+    "servicesTitle": "What we'll implement for you",
+    "servicesDescription": "Websites, social media, campaigns and branding – we'll put together a package that fits your budget and target audience.",
+    "consultingLabel": "Consulting",
+    "consultingTitle": "Competent assessment upfront",
+    "consultingDescription": "We listen, ask the right questions and give you an honest recommendation about which measures really make sense.",
+    "supportLabel": "Support",
+    "supportTitle": "Support for existing projects",
+    "supportDescription": "Have you already worked with us? We support you with optimizations, extensions and ongoing support."
+  },
+  "footer": {
+    "tagline": "Progressive Digital Experiences for Ambitious Brands.",
+    "services": "Services",
+    "company": "Company",
+    "copyright": "All rights reserved.",
+    "socialMedia": {
+      "linkedin": "LinkedIn",
+      "twitter": "Twitter",
+      "instagram": "Instagram"
+    }
+  },
+  "common": {
+    "scrollToTop": "Scroll to top"
+  },
+  "notFound": {
+    "label": "404",
+    "title": "Page not found",
+    "description": "The page you're looking for doesn't exist. Use the navigation or jump directly back to the homepage.",
+    "backToHome": "Back to homepage"
+  },
+  "kpis": {
+    "leads": "Leads",
+    "roas": "ROAS",
+    "cpl": "CPL",
+    "storeVisits": "Store Visits",
+    "brandRecall": "Brand Recall",
+    "socialFollower": "Social Follower",
+    "reach": "Reach",
+    "engagement": "Engagement",
+    "ctr": "CTR"
+  }
+}
+

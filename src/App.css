@@ -189,6 +189,36 @@ footer {
   background: rgba(14, 165, 233, 0.15);
 }
 
+/* Language Toggle Button */
+.language-toggle {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-heading);
+  background: rgba(14, 165, 233, 0.1);
+  border: 1px solid rgba(14, 165, 233, 0.2);
+  border-radius: var(--radius-md);
+  padding: 0.4rem 0.875rem;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  margin-left: var(--space-2);
+  min-width: 48px;
+  text-align: center;
+}
+
+.language-toggle:hover,
+.language-toggle:focus-visible {
+  background: rgba(14, 165, 233, 0.15);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  transform: scale(1.05);
+}
+
+.language-toggle-mobile {
+  margin-left: 0;
+  margin-top: var(--space-2);
+  width: 100%;
+}
+
 /* Mobile Overlay */
 .mobile-overlay {
   position: fixed;
