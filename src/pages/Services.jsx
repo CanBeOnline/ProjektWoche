@@ -1,4 +1,7 @@
 import ServicesSection from "../sections/ServicesSection.jsx";
+import Webentwicklung from "../components/Webentwicklung.jsx";
+import Branding from "../components/Branding.jsx";
+import Technischebetreuung from "../components/Technischebetreuung.jsx";
 
 export default function Services() {
   return (
@@ -12,6 +15,9 @@ export default function Services() {
           </p>
         </header>
       </section>
+      <Webentwicklung />
+      <Branding />
+      <Technischebetreuung />
       <ServicesSection />
     </>
   );
