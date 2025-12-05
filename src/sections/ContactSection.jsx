@@ -5,6 +5,8 @@ import { useTranslation } from "../hooks/useTranslation.js";
 export default function ContactSection() {
   const { t } = useTranslation();
   const [form, setForm] = useState({
+    salutation: "",
+    companyName: "",
     firstName: "",
     lastName: "",
     email: "",
@@ -16,6 +18,7 @@ export default function ContactSection() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const isFormValid =
+    form.salutation.trim() &&
     form.firstName.trim() &&
     form.lastName.trim() &&
     form.email.trim() &&
@@ -54,8 +57,47 @@ export default function ContactSection() {
       <form className="contact-form" onSubmit={handleSubmit}>
         <div className="contact-form-row-grid">
           <div className="form-row">
+            <label htmlFor="salutation">
+              {t("contact.salutation")}
+              <select
+                id="salutation"
+                name="salutation"
+                value={form.salutation}
+                onChange={handleChange}
+                required
+              >
+                <option value="">{t("contact.salutationSelect")}</option>
+                <option value="mr">{t("contact.salutationMr")}</option>
+                <option value="mrs">{t("contact.salutationMrs")}</option>
+                <option value="diverse">{t("contact.salutationDiverse")}</option>
+              </select>
+            </label>
+          </div>
+
+          <div className="form-row">
+            <label htmlFor="companyName">
+              <span style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                <span>{t("contact.companyName")}</span>
+                <span style={{ color: "var(--color-text-muted)", fontSize: "var(--text-xs)" }}>
+                  {t("contact.optional")}
+                </span>
+              </span>
+              <input
+                id="companyName"
+                name="companyName"
+                type="text"
+                placeholder={t("contact.companyNamePlaceholder")}
+                value={form.companyName}
+                onChange={handleChange}
+              />
+            </label>
+          </div>
+        </div>
+
+        <div className="contact-form-row-grid">
+          <div className="form-row">
             <label htmlFor="firstName">
-              {t("contact.firstName")} <span style={{ color: "var(--color-error-500)" }}>{t("contact.required")}</span>
+              {t("contact.firstName")}
               <input
                 id="firstName"
                 name="firstName"
@@ -70,7 +112,7 @@ export default function ContactSection() {
 
           <div className="form-row">
             <label htmlFor="lastName">
-              {t("contact.lastName")} <span style={{ color: "var(--color-error-500)" }}>{t("contact.required")}</span>
+              {t("contact.lastName")}
               <input
                 id="lastName"
                 name="lastName"
@@ -87,7 +129,7 @@ export default function ContactSection() {
         <div className="contact-form-row-grid">
           <div className="form-row">
             <label htmlFor="email">
-              {t("contact.email")} <span style={{ color: "var(--color-error-500)" }}>{t("contact.required")}</span>
+              {t("contact.email")}
               <input
                 id="email"
                 name="email"
@@ -102,9 +144,11 @@ export default function ContactSection() {
 
           <div className="form-row">
             <label htmlFor="phone">
-              {t("contact.phone")}{" "}
-              <span style={{ color: "var(--color-text-muted)", fontSize: "var(--text-xs)" }}>
-                {t("contact.optional")}
+              <span style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                <span>{t("contact.phone")}</span>
+                <span style={{ color: "var(--color-text-muted)", fontSize: "var(--text-xs)" }}>
+                  {t("contact.optional")}
+                </span>
               </span>
               <input
                 id="phone"
@@ -120,9 +164,11 @@ export default function ContactSection() {
 
         <div className="form-row">
           <label htmlFor="budget">
-            {t("contact.budget")}{" "}
-            <span style={{ color: "var(--color-text-muted)", fontSize: "var(--text-xs)" }}>
-              {t("contact.optional")}
+            <span style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+              <span>{t("contact.budget")}</span>
+              <span style={{ color: "var(--color-text-muted)", fontSize: "var(--text-xs)" }}>
+                {t("contact.optional")}
+              </span>
             </span>
             <select
               id="budget"
@@ -140,7 +186,7 @@ export default function ContactSection() {
 
         <div className="form-row">
           <label htmlFor="message">
-            {t("contact.message")} <span style={{ color: "var(--color-error-500)" }}>{t("contact.required")}</span>
+            {t("contact.message")}
             <textarea
               id="message"
               name="message"

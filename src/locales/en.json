@@ -12,7 +12,17 @@
   "hero": {
     "title": "Let's grow your brand.",
     "subtitle": "We create modern websites, social media campaigns and high-impact visuals for ambitious brands.",
-    "cta": "Get in touch"
+    "cta": "Get in touch",
+    "badge": "Creative Digital Agency",
+    "secondaryCta": "View projects",
+    "trust": "Response within 24 hours · clear roadmap after kickoff.",
+    "metrics": {
+      "projects": "Projects delivered",
+      "response": "Response time",
+      "engagement": "Engagement lift"
+    },
+    "engagementLabel": "Engagement lift",
+    "visualFootnote": "Launch-ready assets & growth playbooks"
   },
   "portfolio": {
     "label": "Creative Digital Agency",
@@ -30,8 +40,36 @@
     "servicesCount": "Services",
     "cta": "Start your project now",
     "learnMore": "Learn more",
+    "primaryCta": "Discovery Call (20 Min)",
+    "secondaryCta": "View Details",
+    "viewCases": "View case studies",
+    "filterAll": "All",
+    "promises": [
+      "Clear project plan within 48h",
+      "Launch in 6–8 weeks, measurable from day 1",
+      "Cross-functional team across strategy, UX, content"
+    ],
+    "visual": {
+      "badge": "Launch-ready",
+      "punchline": "Clear plan, clear sprints, measurable outcomes from day one.",
+      "kpi1": { "value": "6–8 weeks", "label": "Launch cycle" },
+      "kpi2": { "value": "+23% CR", "label": "Conversion lift" },
+      "kpi3": { "value": "<24h", "label": "Response time" }
+    },
+    "pageMetrics": {
+      "responseValue": "<24h",
+      "timelineValue": "6–8 weeks"
+    },
+    "stats": {
+      "timeline": "Launch cycle",
+      "conversion": "Avg. conversion lift",
+      "response": "Response time"
+    },
     "pageTitle": "Our Service Portfolio",
     "pageDescription": "Strategy, design and growth playbooks – tailored to ambitious brands.",
+    "projectCtaTitle": "Ready for your project?",
+    "projectCtaDescription": "Let's work together on your next digital project. We're happy to advise you and create a customized offer.",
+    "projectCtaButton": "Go to contact form",
     "categories": {
       "Strategy": "Strategy",
       "Experience": "Experience",
@@ -41,20 +79,54 @@
     "items": {
       "strategy": {
         "title": "Digital Strategy & Positioning",
-        "description": "Workshops, target audience segments and growth playbooks so every campaign is based on clear KPIs."
+        "description": "Workshops, target audience segments and growth playbooks so every campaign is based on clear KPIs.",
+        "quickFact": "+23% conversion lift",
+        "audience": "For CMOs & founders who want to scale campaigns.",
+        "outcomes": [
+          "Clear KPI plan & roadmap within 48h",
+          "Segmented journeys & messaging",
+          "Enablement & decision support for your team"
+        ]
       },
       "web": {
         "title": "Web Design & Development",
-        "description": "High-performance websites and landing pages with headless CMS, perfect UX flow and measurable conversion."
+        "description": "High-performance websites and landing pages with headless CMS, perfect UX flow and measurable conversion.",
+        "quickFact": "Launch in 6–8 weeks",
+        "audience": "For marketing teams that need to launch and test faster.",
+        "outcomes": [
+          "Headless CMS + modular sections",
+          "Lighthouse 90+ & conversion-tested UX",
+          "Analytics & experimentation from day 1"
+        ]
       },
       "content": {
         "title": "Content & Social Media",
-        "description": "Always-on content productions, creator collaborations and paid social setups for sustainable growth."
+        "description": "Always-on content productions, creator collaborations and paid social setups for sustainable growth.",
+        "quickFact": "Always-on playbook",
+        "audience": "For brands with a social/growth focus and clear KPIs.",
+        "outcomes": [
+          "Content calendar + paid-ready assets",
+          "Creator/UGC packages & distribution",
+          "Performance reporting with clear KPIs"
+        ]
       },
       "branding": {
         "title": "Branding & Visual Systems",
-        "description": "Visual identities, motion systems and brand guidelines that work across all touchpoints."
+        "description": "Visual identities, motion systems and brand guidelines that work across all touchpoints.",
+        "quickFact": "Systemic design",
+        "audience": "For rebrands or new brands with multi-channel needs.",
+        "outcomes": [
+          "Visual system + motion basics",
+          "Brand guidelines & toolkits",
+          "Asset packages for every channel"
+        ]
       }
+    },
+    "modal": {
+      "closeAria": "Close modal",
+      "detailsTitle": "What we do for you:",
+      "featuresTitle": "Key features:",
+      "confirm": "Got it"
     }
   },
   "projects": {
@@ -77,9 +149,6 @@
       "recommended": "Recommended",
       "title": "Title (A-Z)"
     },
-    "sortLabel": "Sort by:",
-    "sortRecommended": "Recommended",
-    "sortTitle": "Title (A-Z)",
     "projectDescriptionSuffix": "We show you the starting situation, our approach and the results in a compact case study.",
     "viewCaseStudy": "View case study",
     "openLive": "Open live project",
@@ -93,13 +162,21 @@
     "viewLiveProject": "View live project",
     "brandExperience": "Brand Experience",
     "performance": "Performance",
+    "featured": "Featured Case Study",
     "tags": {
       "Web": "Web",
       "Paid Social": "Paid Social",
       "Content": "Content",
       "Branding": "Branding",
       "Social": "Social",
-      "Influencer": "Influencer"
+      "Influencer": "Influencer",
+      "B2B": "B2B",
+      "Marketing Automation": "Marketing Automation",
+      "E-Commerce": "E-Commerce",
+      "Local SEO": "Local SEO",
+      "Community": "Community",
+      "Employer Branding": "Employer Branding",
+      "Recruiting": "Recruiting"
     },
     "items": {
       "saas-launch": {
@@ -111,24 +188,24 @@
         "description": "Complete rebranding of an established coffee brand with new visual concept"
       },
       "fashion-social": {
-        "title": "Fashion Social Campaign",
-        "description": "Viral social media campaign for fashion collection"
+        "title": "Always-on Social – Fashion Brand",
+        "description": "Content plan, reels production and creator collaborations for sustainable growth."
       },
       "b2b-leadgen": {
-        "title": "B2B Lead Generation",
-        "description": "Specialized lead generation for B2B services"
+        "title": "B2B Lead Generation Campaign",
+        "description": "Multi-channel lead-gen strategy with LinkedIn ads, content marketing and marketing automation for sustained pipeline growth."
       },
       "d2c-launch": {
-        "title": "D2C E-Commerce Launch",
-        "description": "Direct launch of a new direct-to-consumer online shop"
+        "title": "D2C Beauty Brand Launch",
+        "description": "Full brand launch with e-commerce site, influencer partnerships and performance marketing for rapid growth."
       },
       "restaurant-local": {
-        "title": "Restaurant Local Marketing",
-        "description": "Local marketing for restaurant expansion"
+        "title": "Local Awareness – Restaurant Chain",
+        "description": "Hyperlocal marketing campaign with Google Ads, social media and community building to drive foot traffic and online orders."
       },
       "employer-branding": {
-        "title": "Employer Branding",
-        "description": "Building a strong employer brand"
+        "title": "Employer Branding Campaign",
+        "description": "Talent acquisition strategy with employer-branding site, social content and recruiting campaigns to improve applicant quality."
       }
     }
   },
@@ -137,6 +214,11 @@
     "title": "Testimonials",
     "description": "Real experiences from clients who have successfully implemented digital projects with us.",
     "average": "Average",
+    "verified": "Verified client feedback",
+    "punchline": "We partner closely with founders, marketing leads, and sales teams – with clear sprints and measurable outcomes.",
+    "cta": "Request a project",
+    "ctaNote": "Response within 24h",
+    "featured": "Key result",
     "ratingLabel": "Rating {rating} out of 5",
     "roles": {
       "Founder, DTC Brand": "Founder, DTC Brand",
@@ -160,7 +242,14 @@
     "title": "Let's talk about your project",
     "description": "Book us for launches, rebrands or always-on content. We respond within 24 hours.",
     "formTitle": "Send us a request",
-    "formDescription": "Tell us briefly about your project – we'll get back to you with an assessment.",
+    "formDescription": "Tell us briefly about your project, ask questions or request help – we'll get back to you within 24 hours with an assessment.",
+    "salutation": "Salutation",
+    "salutationSelect": "Select salutation",
+    "salutationMr": "Mr.",
+    "salutationMrs": "Mrs.",
+    "salutationDiverse": "Diverse",
+    "companyName": "Company name",
+    "companyNamePlaceholder": "Example Company Ltd.",
     "firstName": "First name",
     "lastName": "Last name",
     "email": "Email address",
@@ -183,13 +272,16 @@
     "success": "Thanks for your request – we'll get back to you soon!",
     "servicesLabel": "Services",
     "servicesTitle": "What we'll implement for you",
-    "servicesDescription": "Websites, social media, campaigns and branding – we'll put together a package that fits your budget and target audience.",
+    "servicesDescription": "Websites, social media, campaigns and branding – we'll put together a package that fits your budget and target audience. From the first concept to the final implementation, we'll guide you through the entire process and create modern, responsive and user-friendly solutions that help your brand grow.",
     "consultingLabel": "Consulting",
     "consultingTitle": "Competent assessment upfront",
-    "consultingDescription": "We listen, ask the right questions and give you an honest recommendation about which measures really make sense.",
+    "consultingDescription": "We listen, ask the right questions and give you an honest recommendation about which measures really make sense. In a free initial consultation, we analyze your requirements, identify potential and develop a tailored strategy together that fits your goals and delivers measurable results.",
     "supportLabel": "Support",
     "supportTitle": "Support for existing projects",
-    "supportDescription": "Have you already worked with us? We support you with optimizations, extensions and ongoing support."
+    "supportDescription": "Have you already worked with us? We support you with optimizations, extensions and ongoing support. Our team is also available after launch – for updates, maintenance, content management or the continuous improvement of your digital presence. We ensure your project remains successful in the long term.",
+    "processLabel": "Process",
+    "processTitle": "Transparent workflow from start to finish",
+    "processDescription": "Our structured process guarantees you maximum transparency and planning security. From the first idea to launch, we accompany you with clear milestones, regular updates and a fixed contact person. We work agilely, communicate proactively and ensure you always know where your project stands and what's coming next."
   },
   "footer": {
     "tagline": "Progressive Digital Experiences for Ambitious Brands.",
@@ -198,7 +290,7 @@
     "copyright": "All rights reserved.",
     "socialMedia": {
       "linkedin": "LinkedIn",
-      "twitter": "Twitter",
+      "twitter": "X",
       "instagram": "Instagram"
     }
   },
