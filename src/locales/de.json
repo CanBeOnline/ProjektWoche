@@ -58,24 +58,28 @@
     }
   },
   "projects": {
-    "label": "Our work",
+    "label": "Projekte",
     "title": "Selected projects",
     "description": "Ein Blick in Kampagnen, Websites und Social-Media-Projekte, die wir für unsere Kunden umgesetzt haben.",
     "viewAll": "Alle Projekte ansehen",
     "viewDetails": "Details ansehen",
-    "pageTitle": "Case Studies & Projekte",
-    "pageDescription": "Tiefere Einblicke in Launch-Kampagnen, Rebrands und Social-Playbooks, die wir für Kunden umgesetzt haben. Jede Karte zeigt dir auf einen Blick, welche Art von Projekt wir umgesetzt haben – von Branding über Performance bis Always-on Social.",
-    "meta": "ausgewählte Projekte · laufend aktualisiert · echte Beispiele aus Markenarbeit & Kampagnen.",
-    "filterAll": "Alle",
-    "sortLabel": "Sortieren:",
+    "pageTitle": "Case Studies",
+    "pageDescription": "Innovative Strategien, die Ergebnisse liefern",
+    "meta": "Projekte",
+    "filter": {
+      "title": "Nach Kategorie filtern",
+      "all": "Alle Kategorien",
+      "clear": "Filter löschen"
+    },
+    "filterAll": "Alle anzeigen",
+    "sort": {
+      "label": "Sortieren:",
+      "recommended": "Empfohlen",
+      "title": "Titel (A-Z)"
+    },
+    "sortLabel": "Sortieren nach:",
     "sortRecommended": "Empfohlen",
-    "sortTitle": "Titel A–Z",
-    "viewCaseStudy": "Case Study ansehen",
-    "viewProject": "Projekt ansehen",
-    "projectDescriptionSuffix": "Wir zeigen dir die Ausgangssituation, unseren Ansatz und die Ergebnisse in einer kompakten Case Study.",
-    "openLive": "Live-Projekt öffnen",
-    "setupLearnings": "Setup & Learnings",
-    "backToOverview": "Zurück zur Übersicht",
+    "sortTitle": "Titel (A-Z)",
     "notFound": "Projekt nicht gefunden",
     "notFoundDescription": "Das angefragte Projekt existiert nicht oder wurde entfernt. Bitte wähle eines unserer anderen Projekte aus.",
     "planProject": "Eigenes Projekt mit uns planen",
@@ -93,18 +97,39 @@
     },
     "items": {
       "saas-launch": {
-        "title": "Launch Campaign – SaaS Startup",
-        "description": "Full funnel launch mit Landing Page, Paid Social Ads und Conversion-optimiertem Content."
+        "title": "SaaS Platform Launch",
+        "description": "Erfolgreicher Launch einer B2B SaaS-Plattform mit gezielter Lead-Generierung"
       },
       "coffee-rebrand": {
-        "title": "Rebrand – Local Coffee Chain",
-        "description": "Neue digitale Brand Experience inkl. Website, Packaging und Social Templates."
+        "title": "Coffee Brand Rebranding",
+        "description": "Komplettes Rebranding einer etablierten Kaffee-Marke mit neuem visuellen Konzept"
       },
       "fashion-social": {
-        "title": "Always-on Social – Fashion Brand",
-        "description": "Content-Plan, Reels-Produktion und Creator Collabs für nachhaltiges Wachstum."
+        "title": "Fashion Social Campaign",
+        "description": "Viral Social-Media Kampagne für Fashion-Kollektion"
+      },
+      "b2b-leadgen": {
+        "title": "B2B Lead Generation",
+        "description": "Spezialisierten Lead-Generierung für B2B Services"
+      },
+      "d2c-launch": {
+        "title": "D2C E-Commerce Launch",
+        "description": "Direkter Launch eines neuen Direct-to-Consumer Online-Shops"
+      },
+      "restaurant-local": {
+        "title": "Restaurant Local Marketing",
+        "description": "Lokales Marketing für Restaurant-Expansion"
+      },
+      "employer-branding": {
+        "title": "Employer Branding",
+        "description": "Aufbau einer starken Arbeitgeber-Marke"
       }
-    }
+    },
+    "viewCaseStudy": "Case Study ansehen",
+    "openLive": "Live-Projekt öffnen",
+    "setupLearnings": "Setup & Erkenntnisse",
+    "viewProject": "Projekt ansehen",
+    "projectDescriptionSuffix": "Wir zeigen dir die Ausgangssituation, unseren Ansatz und die Ergebnisse in einer kompakten Case Study."
   },
   "testimonials": {
     "label": "What our clients say",

@@ -58,6 +58,7 @@ export default function Projects() {
     const { t } = useTranslation();
     const [selectedTag, setSelectedTag] = useState("all");
     const [sortBy, setSortBy] = useState("recommended");
+    const [isFilterOpen, setIsFilterOpen] = useState(false);
 
     const allTags = useMemo(() => {
         const tagSet = new Set();
@@ -81,8 +82,18 @@ export default function Projects() {
         return list;
     }, [selectedTag, sortBy]);
 
+    const handleFilterSelect = (tag) => {
+        setSelectedTag(tag);
+        setIsFilterOpen(false);
+    };
+
+    const handleClickOutside = (e) => {
+        if (e.target.closest(".filter-group")) return;
+        setIsFilterOpen(false);
+    };
+
     return (
-        <section id="projects" className="section projects">
+        <section id="projects" className="section projects" onClick={handleClickOutside}>
             <header className="section-header projects-intro">
                 <p className="section-label">{t("projects.label")}</p>
                 <h1 className="section-title">{t("projects.pageTitle")}</h1>
@@ -90,34 +101,105 @@ export default function Projects() {
                     {t("projects.pageDescription")}
                 </p>
                 <p className="projects-meta">
-                    {projects.length} {t("projects.meta")}
+                    {visibleProjects.length} {t("projects.meta")}
                 </p>
             </header>
 
             <div className="projects-toolbar d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-3 mb-4">
-                <div className="projects-filters d-flex flex-wrap gap-2">
-                    <button
-                        type="button"
-                        className={`btn btn-sm ${selectedTag === "all" ? "btn-primary" : "btn-outline-secondary"}`}
-                        onClick={() => setSelectedTag("all")}
-                    >
-                        {t("projects.filterAll")}
-                    </button>
-                    {allTags.map((tag) => (
+                <div className="projects-controls d-flex flex-wrap gap-2 align-items-center">
+                    {/* Enhanced Filter Dropdown */}
+                    <div className="filter-group">
                         <button
-                            key={tag}
                             type="button"
-                            className={`btn btn-sm ${selectedTag === tag ? "btn-primary" : "btn-outline-secondary"}`}
-                            onClick={() => setSelectedTag(tag)}
+                            className={`filter-trigger btn btn-sm ${isFilterOpen ? "active" : ""}`}
+                            onClick={() => setIsFilterOpen(!isFilterOpen)}
+                            aria-expanded={isFilterOpen}
+                            aria-controls="filter-dropdown"
                         >
-                            {tag}
+                            <span className="filter-icon">🔍</span>
+                            <span className="filter-text">
+                                {selectedTag === "all"
+                                    ? t("projects.filter.all")
+                                    : selectedTag}
+                            </span>
+                            <span className={`filter-chevron ${isFilterOpen ? "open" : ""}`}>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M4 6L8 10L12 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                </svg>
+                            </span>
                         </button>
-                    ))}
+
+                        {isFilterOpen && (
+                            <>
+                                <div className="filter-backdrop"></div>
+                                <div className="filter-dropdown" id="filter-dropdown">
+                                    <div className="filter-dropdown-header">
+                                        <h4>{t("projects.filter.title")}</h4>
+                                        <button
+                                            type="button"
+                                            className="filter-close-btn"
+                                            onClick={() => setIsFilterOpen(false)}
+                                            aria-label="Close filter"
+                                        >
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                                <path d="M15 5L5 15M5 5L15 15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div className="filter-dropdown-content">
+                                        <button
+                                            type="button"
+                                            className={`filter-option ${selectedTag === "all" ? "active" : ""}`}
+                                            onClick={() => handleFilterSelect("all")}
+                                        >
+                                            <span className="filter-option-indicator"></span>
+                                            <span className="filter-option-text">{t("projects.filter.all")}</span>
+                                            {selectedTag === "all" && <span className="filter-option-check">✓</span>}
+                                        </button>
+                                        
+                                        <div className="filter-divider"></div>
+                                        
+                                        <div className="filter-tags-list">
+                                            {allTags.map((tag) => (
+                                                <button
+                                                    key={tag}
+                                                    type="button"
+                                                    className={`filter-option ${selectedTag === tag ? "active" : ""}`}
+                                                    onClick={() => handleFilterSelect(tag)}
+                                                >
+                                                    <span className="filter-option-indicator"></span>
+                                                    <span className="filter-option-text">{tag}</span>
+                                                    {selectedTag === tag && <span className="filter-option-check">✓</span>}
+                                                </button>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </div>
+                            </>
+                        )}
+                    </div>
+
+                    {/* Active Filter Badge */}
+                    {selectedTag !== "all" && (
+                        <span className="filter-badge">
+                            <span className="filter-badge-text">{selectedTag}</span>
+                            <button
+                                type="button"
+                                className="filter-badge-close"
+                                onClick={() => setSelectedTag("all")}
+                                aria-label={t("projects.filter.clear")}
+                            >
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                                    <path d="M1 1L13 13M13 1L1 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+                                </svg>
+                            </button>
+                        </span>
+                    )}
                 </div>
 
                 <div className="projects-sort d-flex align-items-center gap-2">
                     <label htmlFor="project-sort" className="projects-sort-label">
-                        {t("projects.sortLabel")}
+                        {t("projects.sort.label")}
                     </label>
                     <select
                         id="project-sort"
@@ -125,8 +207,8 @@ export default function Projects() {
                         value={sortBy}
                         onChange={(event) => setSortBy(event.target.value)}
                     >
-                        <option value="recommended">{t("projects.sortRecommended")}</option>
-                        <option value="title">{t("projects.sortTitle")}</option>
+                        <option value="recommended">{t("projects.sort.recommended")}</option>
+                        <option value="title">{t("projects.sort.title")}</option>
                     </select>
                 </div>
             </div>

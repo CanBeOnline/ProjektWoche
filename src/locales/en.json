@@ -58,23 +58,33 @@
     }
   },
   "projects": {
-    "label": "Our work",
+    "label": "Projects",
     "title": "Selected projects",
     "description": "A look at campaigns, websites and social media projects we've implemented for our clients.",
     "viewAll": "View all projects",
     "viewDetails": "View details",
-    "pageTitle": "Case Studies & Projects",
-    "pageDescription": "Deeper insights into launch campaigns, rebrands and social playbooks we've implemented for clients. Each card shows you at a glance what type of project we've implemented – from branding to performance to always-on social.",
-    "meta": "selected projects · continuously updated · real examples from brand work & campaigns.",
-    "filterAll": "All",
+    "pageTitle": "Case Studies",
+    "pageDescription": "Innovative strategies that deliver results",
+    "meta": "projects",
+    "filter": {
+      "title": "Filter by Category",
+      "all": "All Categories",
+      "clear": "Clear Filter"
+    },
+    "filterAll": "Show all",
+    "sort": {
+      "label": "Sort by:",
+      "recommended": "Recommended",
+      "title": "Title (A-Z)"
+    },
     "sortLabel": "Sort by:",
     "sortRecommended": "Recommended",
-    "sortTitle": "Title A–Z",
-    "viewCaseStudy": "View case study",
-    "viewProject": "View project",
+    "sortTitle": "Title (A-Z)",
     "projectDescriptionSuffix": "We show you the starting situation, our approach and the results in a compact case study.",
+    "viewCaseStudy": "View case study",
     "openLive": "Open live project",
     "setupLearnings": "Setup & Learnings",
+    "viewProject": "View project",
     "backToOverview": "Back to overview",
     "notFound": "Project not found",
     "notFoundDescription": "The requested project does not exist or has been removed. Please choose one of our other projects.",
@@ -93,16 +103,32 @@
     },
     "items": {
       "saas-launch": {
-        "title": "Launch Campaign – SaaS Startup",
-        "description": "Full funnel launch with landing page, paid social ads and conversion-optimized content."
+        "title": "SaaS Platform Launch",
+        "description": "Successful launch of a B2B SaaS platform with targeted lead generation"
       },
       "coffee-rebrand": {
-        "title": "Rebrand – Local Coffee Chain",
-        "description": "New digital brand experience including website, packaging and social templates."
+        "title": "Coffee Brand Rebranding",
+        "description": "Complete rebranding of an established coffee brand with new visual concept"
       },
       "fashion-social": {
-        "title": "Always-on Social – Fashion Brand",
-        "description": "Content plan, reels production and creator collaborations for sustainable growth."
+        "title": "Fashion Social Campaign",
+        "description": "Viral social media campaign for fashion collection"
+      },
+      "b2b-leadgen": {
+        "title": "B2B Lead Generation",
+        "description": "Specialized lead generation for B2B services"
+      },
+      "d2c-launch": {
+        "title": "D2C E-Commerce Launch",
+        "description": "Direct launch of a new direct-to-consumer online shop"
+      },
+      "restaurant-local": {
+        "title": "Restaurant Local Marketing",
+        "description": "Local marketing for restaurant expansion"
+      },
+      "employer-branding": {
+        "title": "Employer Branding",
+        "description": "Building a strong employer brand"
       }
     }
   },
