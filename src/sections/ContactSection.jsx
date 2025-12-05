@@ -5,6 +5,8 @@ import { useTranslation } from "../hooks/useTranslation.js";
 export default function ContactSection() {
   const { t } = useTranslation();
   const [form, setForm] = useState({
+    salutation: "",
+    companyName: "",
     firstName: "",
     lastName: "",
     email: "",
@@ -16,6 +18,7 @@ export default function ContactSection() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const isFormValid =
+    form.salutation.trim() &&
     form.firstName.trim() &&
     form.lastName.trim() &&
     form.email.trim() &&
@@ -52,6 +55,43 @@ export default function ContactSection() {
       </header>
 
       <form className="contact-form" onSubmit={handleSubmit}>
+        <div className="contact-form-row-grid">
+          <div className="form-row">
+            <label htmlFor="salutation">
+              {t("contact.salutation")} <span style={{ color: "var(--color-error-500)" }}>{t("contact.required")}</span>
+              <select
+                id="salutation"
+                name="salutation"
+                value={form.salutation}
+                onChange={handleChange}
+                required
+              >
+                <option value="">{t("contact.salutationSelect")}</option>
+                <option value="mr">{t("contact.salutationMr")}</option>
+                <option value="mrs">{t("contact.salutationMrs")}</option>
+                <option value="diverse">{t("contact.salutationDiverse")}</option>
+              </select>
+            </label>
+          </div>
+
+          <div className="form-row">
+            <label htmlFor="companyName">
+              {t("contact.companyName")}{" "}
+              <span style={{ color: "var(--color-text-muted)", fontSize: "var(--text-xs)" }}>
+                {t("contact.optional")}
+              </span>
+              <input
+                id="companyName"
+                name="companyName"
+                type="text"
+                placeholder={t("contact.companyNamePlaceholder")}
+                value={form.companyName}
+                onChange={handleChange}
+              />
+            </label>
+          </div>
+        </div>
+
         <div className="contact-form-row-grid">
           <div className="form-row">
             <label htmlFor="firstName">
