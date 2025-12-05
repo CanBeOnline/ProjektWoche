@@ -58,6 +58,10 @@
       "kpi2": { "value": "+23% CR", "label": "Conversion-Lift" },
       "kpi3": { "value": "<24h", "label": "Antwortzeit" }
     },
+    "pageMetrics": {
+      "responseValue": "<24h",
+      "timelineValue": "6–8 Wochen"
+    },
     "stats": {
       "timeline": "Launch-Zyklus",
       "conversion": "Ø Conversion-Lift",
@@ -65,6 +69,9 @@
     },
     "pageTitle": "Unser Leistungsportfolio",
     "pageDescription": "Strategie, Design und Growth Playbooks – zugeschnitten auf ambitionierte Marken.",
+    "projectCtaTitle": "Bereit für dein Projekt?",
+    "projectCtaDescription": "Lass uns gemeinsam dein nächstes digitales Projekt umsetzen. Wir beraten dich gerne und erstellen ein maßgeschneidertes Angebot.",
+    "projectCtaButton": "Zum Kontaktformular",
     "categories": {
       "Strategy": "Strategie",
       "Experience": "Erfahrung",
@@ -230,7 +237,14 @@
     "title": "Lass uns über dein Projekt sprechen",
     "description": "Buche uns für Launches, Rebrands oder Always-on Content. Wir antworten innerhalb von 24 Stunden.",
     "formTitle": "Stell uns eine Anfrage",
-    "formDescription": "Erzähl uns kurz von deinem Projekt – wir melden uns mit einer Einschätzung zurück.",
+    "formDescription": "Erzähl uns kurz von deinem Projekt, stelle Fragen oder bitte um Hilfe – wir melden uns innerhalb von 24 Stunden mit einer Einschätzung zurück.",
+    "salutation": "Anrede",
+    "salutationSelect": "Anrede auswählen",
+    "salutationMr": "Herr",
+    "salutationMrs": "Frau",
+    "salutationDiverse": "Diverse",
+    "companyName": "Firmenname",
+    "companyNamePlaceholder": "Musterfirma GmbH",
     "firstName": "Vorname",
     "lastName": "Nachname",
     "email": "E‑Mail Adresse",
@@ -253,13 +267,16 @@
     "success": "Danke für deine Anfrage – wir melden uns bald bei dir!",
     "servicesLabel": "Leistungen",
     "servicesTitle": "Was wir für dich umsetzen",
-    "servicesDescription": "Websites, Social Media, Kampagnen und Branding – wir schnüren dir ein Paket, das zu deinem Budget und deiner Zielgruppe passt.",
+    "servicesDescription": "Websites, Social Media, Kampagnen und Branding – wir schnüren dir ein Paket, das zu deinem Budget und deiner Zielgruppe passt. Von der ersten Konzeption bis zur finalen Umsetzung begleiten wir dich durch den gesamten Prozess und erstellen moderne, responsive und benutzerfreundliche Lösungen, die deine Marke zum Wachsen bringen.",
     "consultingLabel": "Beratung",
     "consultingTitle": "Kompetente Einschätzung vorab",
-    "consultingDescription": "Wir hören zu, stellen die richtigen Fragen und geben dir eine ehrliche Empfehlung, welche Maßnahmen wirklich sinnvoll sind.",
+    "consultingDescription": "Wir hören zu, stellen die richtigen Fragen und geben dir eine ehrliche Empfehlung, welche Maßnahmen wirklich sinnvoll sind. In einem kostenlosen Erstgespräch analysieren wir deine Anforderungen, identifizieren Potenziale und entwickeln gemeinsam eine maßgeschneiderte Strategie, die zu deinen Zielen passt und messbare Ergebnisse liefert.",
     "supportLabel": "Support",
     "supportTitle": "Begleitung bestehender Projekte",
-    "supportDescription": "Du hast bereits mit uns gearbeitet? Wir unterstützen dich bei Optimierungen, Erweiterungen und laufender Betreuung."
+    "supportDescription": "Du hast bereits mit uns gearbeitet? Wir unterstützen dich bei Optimierungen, Erweiterungen und laufender Betreuung. Unser Team steht dir auch nach dem Launch zur Verfügung – für Updates, Wartung, Content-Pflege oder die kontinuierliche Verbesserung deiner digitalen Präsenz. Wir sorgen dafür, dass dein Projekt langfristig erfolgreich bleibt.",
+    "processLabel": "Prozess",
+    "processTitle": "Transparenter Workflow von Anfang bis Ende",
+    "processDescription": "Unser strukturierter Prozess garantiert dir maximale Transparenz und Planungssicherheit. Von der ersten Idee bis zum Launch begleiten wir dich mit klaren Meilensteinen, regelmäßigen Updates und einem festen Ansprechpartner. Wir arbeiten agil, kommunizieren proaktiv und stellen sicher, dass du jederzeit weißt, wo dein Projekt steht und was als Nächstes kommt."
   },
   "footer": {
     "tagline": "Progressive Digital Experiences for Ambitious Brands.",
@@ -268,7 +285,7 @@
     "copyright": "Alle Rechte vorbehalten.",
     "socialMedia": {
       "linkedin": "LinkedIn",
-      "twitter": "Twitter",
+      "twitter": "X",
       "instagram": "Instagram"
     }
   },

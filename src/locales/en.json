@@ -58,6 +58,10 @@
       "kpi2": { "value": "+23% CR", "label": "Conversion lift" },
       "kpi3": { "value": "<24h", "label": "Response time" }
     },
+    "pageMetrics": {
+      "responseValue": "<24h",
+      "timelineValue": "6–8 weeks"
+    },
     "stats": {
       "timeline": "Launch cycle",
       "conversion": "Avg. conversion lift",
@@ -65,6 +69,9 @@
     },
     "pageTitle": "Our Service Portfolio",
     "pageDescription": "Strategy, design and growth playbooks – tailored to ambitious brands.",
+    "projectCtaTitle": "Ready for your project?",
+    "projectCtaDescription": "Let's work together on your next digital project. We're happy to advise you and create a customized offer.",
+    "projectCtaButton": "Go to contact form",
     "categories": {
       "Strategy": "Strategy",
       "Experience": "Experience",
@@ -230,7 +237,14 @@
     "title": "Let's talk about your project",
     "description": "Book us for launches, rebrands or always-on content. We respond within 24 hours.",
     "formTitle": "Send us a request",
-    "formDescription": "Tell us briefly about your project – we'll get back to you with an assessment.",
+    "formDescription": "Tell us briefly about your project, ask questions or request help – we'll get back to you within 24 hours with an assessment.",
+    "salutation": "Salutation",
+    "salutationSelect": "Select salutation",
+    "salutationMr": "Mr.",
+    "salutationMrs": "Mrs.",
+    "salutationDiverse": "Diverse",
+    "companyName": "Company name",
+    "companyNamePlaceholder": "Example Company Ltd.",
     "firstName": "First name",
     "lastName": "Last name",
     "email": "Email address",
@@ -253,13 +267,16 @@
     "success": "Thanks for your request – we'll get back to you soon!",
     "servicesLabel": "Services",
     "servicesTitle": "What we'll implement for you",
-    "servicesDescription": "Websites, social media, campaigns and branding – we'll put together a package that fits your budget and target audience.",
+    "servicesDescription": "Websites, social media, campaigns and branding – we'll put together a package that fits your budget and target audience. From the first concept to the final implementation, we'll guide you through the entire process and create modern, responsive and user-friendly solutions that help your brand grow.",
     "consultingLabel": "Consulting",
     "consultingTitle": "Competent assessment upfront",
-    "consultingDescription": "We listen, ask the right questions and give you an honest recommendation about which measures really make sense.",
+    "consultingDescription": "We listen, ask the right questions and give you an honest recommendation about which measures really make sense. In a free initial consultation, we analyze your requirements, identify potential and develop a tailored strategy together that fits your goals and delivers measurable results.",
     "supportLabel": "Support",
     "supportTitle": "Support for existing projects",
-    "supportDescription": "Have you already worked with us? We support you with optimizations, extensions and ongoing support."
+    "supportDescription": "Have you already worked with us? We support you with optimizations, extensions and ongoing support. Our team is also available after launch – for updates, maintenance, content management or the continuous improvement of your digital presence. We ensure your project remains successful in the long term.",
+    "processLabel": "Process",
+    "processTitle": "Transparent workflow from start to finish",
+    "processDescription": "Our structured process guarantees you maximum transparency and planning security. From the first idea to launch, we accompany you with clear milestones, regular updates and a fixed contact person. We work agilely, communicate proactively and ensure you always know where your project stands and what's coming next."
   },
   "footer": {
     "tagline": "Progressive Digital Experiences for Ambitious Brands.",
@@ -268,7 +285,7 @@
     "copyright": "All rights reserved.",
     "socialMedia": {
       "linkedin": "LinkedIn",
-      "twitter": "Twitter",
+      "twitter": "X",
       "instagram": "Instagram"
     }
   },
