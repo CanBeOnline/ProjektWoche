@@ -1,6 +1,9 @@
 import { useEffect } from "react";
+import { useTranslation } from "../hooks/useTranslation.js";
 
 export default function ServiceModal({ isOpen, onClose, service }) {
+  const { t } = useTranslation();
+
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -34,12 +37,16 @@ export default function ServiceModal({ isOpen, onClose, service }) {
   return (
     <div className="service-modal-overlay" onClick={onClose}>
       <div className="service-modal-content" onClick={(e) => e.stopPropagation()}>
-        <button className="service-modal-close" onClick={onClose} aria-label="Modal schließen">
+        <button
+          className="service-modal-close"
+          onClick={onClose}
+          aria-label={t("services.modal.closeAria", "Modal schließen")}
+        >
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </button>
-        
+
         <div className="service-modal-header">
           <span className="service-modal-icon" aria-hidden="true">
             {service.title.slice(0, 2).toUpperCase()}
@@ -49,10 +56,12 @@ export default function ServiceModal({ isOpen, onClose, service }) {
 
         <div className="service-modal-body">
           <p className="service-modal-description">{service.description}</p>
-          
+
           {service.details && (
             <div className="service-modal-details">
-              <h3 className="service-modal-subtitle">Was wir für Sie tun:</h3>
+              <h3 className="service-modal-subtitle">
+                {t("services.modal.detailsTitle", "Was wir für Sie tun:")}
+              </h3>
               <ul className="service-modal-list">
                 {service.details.map((detail, index) => (
                   <li key={index}>{detail}</li>
@@ -63,7 +72,9 @@ export default function ServiceModal({ isOpen, onClose, service }) {
 
           {service.features && (
             <div className="service-modal-features">
-              <h3 className="service-modal-subtitle">Leistungsmerkmale:</h3>
+              <h3 className="service-modal-subtitle">
+                {t("services.modal.featuresTitle", "Leistungsmerkmale:")}
+              </h3>
               <ul className="service-modal-list">
                 {service.features.map((feature, index) => (
                   <li key={index}>{feature}</li>
@@ -75,7 +86,7 @@ export default function ServiceModal({ isOpen, onClose, service }) {
 
         <div className="service-modal-footer">
           <button className="service-modal-cta" onClick={onClose}>
-            Verstanden
+            {t("services.modal.confirm", "Verstanden")}
           </button>
         </div>
       </div>

@@ -82,7 +82,7 @@ export default function Webentwicklung() {
   };
 
   return (
-    <div className="webentwicklung-container">
+    <section id="webentwicklung" className="webentwicklung-container">
       <div className="webentwicklung-grid">
         {services.map((service) => (
           <article key={service.id} className="webentwicklung-card">
@@ -100,19 +100,19 @@ export default function Webentwicklung() {
               >
                 Mehr Info
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M6 12L10 8L6 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
               </button>
             </div>
           </article>
         ))}
       </div>
-      <ServiceModal 
-        isOpen={isModalOpen} 
-        onClose={handleCloseModal} 
-        service={selectedService} 
+      <ServiceModal
+        isOpen={isModalOpen}
+        onClose={handleCloseModal}
+        service={selectedService}
       />
-    </div>
+    </section>
   );
 }
 

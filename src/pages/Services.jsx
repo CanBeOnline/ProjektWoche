@@ -1,4 +1,4 @@
-import ServicesSection from "../sections/ServicesSection.jsx";
+import { useEffect } from "react";
 import { useTranslation } from "../hooks/useTranslation.js";
 import Webentwicklung from "../components/Webentwicklung.jsx";
 import Branding from "../components/Branding.jsx";
@@ -6,6 +6,19 @@ import Technischebetreuung from "../components/Technischebetreuung.jsx";
 
 export default function Services() {
   const { t } = useTranslation();
+
+  useEffect(() => {
+    // Smooth scroll to anchor if present in URL
+    const hash = window.location.hash;
+    if (hash) {
+      setTimeout(() => {
+        const element = document.querySelector(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 100);
+    }
+  }, []);
 
   return (
     <>
@@ -21,7 +34,6 @@ export default function Services() {
       <Webentwicklung />
       <Branding />
       <Technischebetreuung />
-      <ServicesSection />
     </>
   );
 }

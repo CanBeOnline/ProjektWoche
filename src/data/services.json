@@ -4,28 +4,60 @@
     "title": "Digital Strategy & Positioning",
     "description": "Workshops, Zielgruppensegmente und Growth Playbooks, damit jede Kampagne auf klaren KPIs basiert.",
     "icon": "DS",
-    "category": "Strategy"
+    "category": "Strategy",
+    "quickFact": "+23% Conversion-Lift",
+    "audience": "Für CMOs & Founder, die Kampagnen skalieren wollen.",
+    "outcomes": [
+      "Klarer KPI-Plan & Roadmap in 48h",
+      "Segmentierte Journeys & Messaging",
+      "Enablement & Entscheidungsgrundlagen fürs Team"
+    ],
+    "detailAnchor": null
   },
   {
     "id": "web",
     "title": "Web Design & Development",
     "description": "High-Performance Websites und Landing Pages mit Headless CMS, perfektem UX-Flow und messbarer Conversion.",
     "icon": "WD",
-    "category": "Experience"
+    "category": "Experience",
+    "quickFact": "Launch in 6–8 Wochen",
+    "audience": "Für Marketing-Teams, die schneller launchen und testen wollen.",
+    "outcomes": [
+      "Headless CMS + modulare Sections",
+      "Lighthouse 90+ & Conversion-getestete UX",
+      "Analytics & Experiment Setups ab Tag 1"
+    ],
+    "detailAnchor": "webentwicklung"
   },
   {
     "id": "content",
     "title": "Content & Social Media",
     "description": "Always-on Content-Produktionen, Creator-Kooperationen und Paid-Social-Setups für nachhaltiges Wachstum.",
     "icon": "SM",
-    "category": "Growth"
+    "category": "Growth",
+    "quickFact": "Always-on Playbook",
+    "audience": "Für Brands mit Social-/Growth-Fokus und klaren KPIs.",
+    "outcomes": [
+      "Content-Kalender + Paid-ready Assets",
+      "Creator/UGC-Pakete & Distribution",
+      "Performance-Reporting mit klaren KPIs"
+    ],
+    "detailAnchor": "marketing"
   },
   {
     "id": "branding",
     "title": "Branding & Visual Systems",
     "description": "Visuelle Identitäten, Motion Systeme und Brand Guidelines, die in allen Touchpoints funktionieren.",
     "icon": "BV",
-    "category": "Identity"
+    "category": "Identity",
+    "quickFact": "Systemisches Design",
+    "audience": "Für Rebrands oder neue Marken mit Multi-Channel-Bedarf.",
+    "outcomes": [
+      "Visual System + Motion Basics",
+      "Brand Guidelines & Toolkits",
+      "Asset-Pakete für alle Kanäle"
+    ],
+    "detailAnchor": "branding"
   }
 ]
 
