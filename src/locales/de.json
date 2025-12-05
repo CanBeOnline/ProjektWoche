@@ -10,26 +10,59 @@
     "consulting": "Consulting"
   },
   "hero": {
-    "title": "Let's grow your brand.",
-    "subtitle": "We create modern websites, social media campaigns and high-impact visuals for ambitious brands.",
-    "cta": "Get in touch"
+    "title": "Lass uns deine Marke wachsen lassen.",
+    "subtitle": "Wir erstellen moderne Websites, Social-Media-Kampagnen und wirkungsstarke Visuals für ambitionierte Marken.",
+    "cta": "Kontakt aufnehmen",
+    "badge": "Digitale Kreativagentur",
+    "secondaryCta": "Projekte ansehen",
+    "trust": "Antwort innerhalb von 24 Stunden · klarer Fahrplan nach dem Kickoff.",
+    "metrics": {
+      "projects": "Projekte umgesetzt",
+      "response": "Antwortzeit",
+      "engagement": "Engagement-Lift"
+    },
+    "engagementLabel": "Engagement-Lift",
+    "visualFootnote": "Launch-bereite Assets & Growth-Playbooks"
   },
   "portfolio": {
-    "label": "Creative Digital Agency",
-    "title": "We help brands grow with web & social.",
-    "subtitle": "Modern websites, scroll-stopping social content and clear digital strategies for ambitious companies.",
-    "cta": "Get in touch",
-    "viewWork": "View our work",
-    "campaignPerformance": "Campaign Performance",
+    "label": "Kreative Digitalagentur",
+    "title": "Wir helfen Marken mit Web & Social zu wachsen.",
+    "subtitle": "Moderne Websites, Social-Content mit Scroll-Stop-Effekt und klare digitale Strategien für ambitionierte Unternehmen.",
+    "cta": "Kontakt aufnehmen",
+    "viewWork": "Unsere Arbeiten ansehen",
+    "campaignPerformance": "Kampagnen-Performance",
     "engagement": "+132% Engagement"
   },
   "services": {
-    "label": "What we do",
-    "title": "Services",
+    "label": "Was wir tun",
+    "title": "Leistungen",
     "description": "Wir kombinieren Strategie, Design und Technologie, um digitale Erlebnisse zu bauen, die Ergebnisse liefern.",
-    "servicesCount": "Services",
+    "servicesCount": "Leistungen",
     "cta": "Jetzt Projekt starten",
     "learnMore": "Mehr erfahren",
+    "primaryCta": "Discovery Call (20 Min)",
+    "secondaryCta": "Details ansehen",
+    "viewCases": "Case Studies ansehen",
+    "filterAll": "Alle",
+    "primaryCta": "Discovery Call (20 Min)",
+    "secondaryCta": "Case ansehen",
+    "promises": [
+      "Klarer Projektplan in 48h",
+      "Launch in 6–8 Wochen, messbar ab Tag 1",
+      "Cross-funktionales Team aus Strategy, UX, Content"
+    ],
+    "visual": {
+      "badge": "Launch-bereit",
+      "punchline": "Klarer Plan, klare Sprints, messbare Ergebnisse ab Tag 1.",
+      "kpi1": { "value": "6–8 Wochen", "label": "Launch-Zyklus" },
+      "kpi2": { "value": "+23% CR", "label": "Conversion-Lift" },
+      "kpi3": { "value": "<24h", "label": "Antwortzeit" }
+    },
+    "stats": {
+      "timeline": "Launch-Zyklus",
+      "conversion": "Ø Conversion-Lift",
+      "response": "Antwortzeit"
+    },
     "pageTitle": "Unser Leistungsportfolio",
     "pageDescription": "Strategie, Design und Growth Playbooks – zugeschnitten auf ambitionierte Marken.",
     "categories": {
@@ -40,26 +73,60 @@
     },
     "items": {
       "strategy": {
-        "title": "Digital Strategy & Positioning",
-        "description": "Workshops, Zielgruppensegmente und Growth Playbooks, damit jede Kampagne auf klaren KPIs basiert."
+        "title": "Digitale Strategie & Positionierung",
+        "description": "Workshops, Zielgruppensegmente und Growth Playbooks, damit jede Kampagne auf klaren KPIs basiert.",
+        "quickFact": "+23% Conversion-Lift",
+        "audience": "Für CMOs & Founder, die Kampagnen skalieren wollen.",
+        "outcomes": [
+          "Klarer KPI-Plan & Roadmap in 48h",
+          "Segmentierte Journeys & Messaging",
+          "Enablement & Entscheidungsgrundlagen fürs Team"
+        ]
       },
       "web": {
-        "title": "Web Design & Development",
-        "description": "High-Performance Websites und Landing Pages mit Headless CMS, perfektem UX-Flow und messbarer Conversion."
+        "title": "Webdesign & Entwicklung",
+        "description": "High-Performance Websites und Landing Pages mit Headless CMS, perfektem UX-Flow und messbarer Conversion.",
+        "quickFact": "Launch in 6–8 Wochen",
+        "audience": "Für Marketing-Teams, die schneller launchen und testen wollen.",
+        "outcomes": [
+          "Headless CMS + modulare Sections",
+          "Lighthouse 90+ & Conversion-getestete UX",
+          "Analytics & Experiment Setups ab Tag 1"
+        ]
       },
       "content": {
         "title": "Content & Social Media",
-        "description": "Always-on Content-Produktionen, Creator-Kooperationen und Paid-Social-Setups für nachhaltiges Wachstum."
+        "description": "Always-on Content-Produktionen, Creator-Kooperationen und Paid-Social-Setups für nachhaltiges Wachstum.",
+        "quickFact": "Always-on Playbook",
+        "audience": "Für Brands mit Social-/Growth-Fokus und klaren KPIs.",
+        "outcomes": [
+          "Content-Kalender + Paid-ready Assets",
+          "Creator/UGC-Pakete & Distribution",
+          "Performance-Reporting mit klaren KPIs"
+        ]
       },
       "branding": {
-        "title": "Branding & Visual Systems",
-        "description": "Visuelle Identitäten, Motion Systeme und Brand Guidelines, die in allen Touchpoints funktionieren."
+        "title": "Branding & Visuelle Systeme",
+        "description": "Visuelle Identitäten, Motion Systeme und Brand Guidelines, die in allen Touchpoints funktionieren.",
+        "quickFact": "Systemisches Design",
+        "audience": "Für Rebrands oder neue Marken mit Multi-Channel-Bedarf.",
+        "outcomes": [
+          "Visual System + Motion Basics",
+          "Brand Guidelines & Toolkits",
+          "Asset-Pakete für alle Kanäle"
+        ]
       }
+    },
+    "modal": {
+      "closeAria": "Modal schließen",
+      "detailsTitle": "Was wir für Sie tun:",
+      "featuresTitle": "Leistungsmerkmale:",
+      "confirm": "Verstanden"
     }
   },
   "projects": {
-    "label": "Our work",
-    "title": "Selected projects",
+    "label": "Unsere Arbeiten",
+    "title": "Ausgewählte Projekte",
     "description": "Ein Blick in Kampagnen, Websites und Social-Media-Projekte, die wir für unsere Kunden umgesetzt haben.",
     "viewAll": "Alle Projekte ansehen",
     "viewDetails": "Details ansehen",
@@ -83,13 +150,21 @@
     "viewLiveProject": "Live-Projekt ansehen",
     "brandExperience": "Brand Experience",
     "performance": "Performance",
+    "featured": "Highlight-Projekt",
     "tags": {
       "Web": "Web",
       "Paid Social": "Paid Social",
       "Content": "Content",
       "Branding": "Branding",
       "Social": "Social",
-      "Influencer": "Influencer"
+      "Influencer": "Influencer",
+      "B2B": "B2B",
+      "Marketing Automation": "Marketing-Automation",
+      "E-Commerce": "E-Commerce",
+      "Local SEO": "Local SEO",
+      "Community": "Community",
+      "Employer Branding": "Employer Branding",
+      "Recruiting": "Recruiting"
     },
     "items": {
       "saas-launch": {
@@ -103,19 +178,40 @@
       "fashion-social": {
         "title": "Always-on Social – Fashion Brand",
         "description": "Content-Plan, Reels-Produktion und Creator Collabs für nachhaltiges Wachstum."
+      },
+      "b2b-leadgen": {
+        "title": "B2B Lead Generation Campaign",
+        "description": "Multi-Channel Lead-Gen-Strategie mit LinkedIn Ads, Content-Marketing und Marketing-Automation für nachhaltiges Pipeline-Wachstum."
+      },
+      "d2c-launch": {
+        "title": "D2C Beauty Brand Launch",
+        "description": "Vollständiger Marken-Launch mit E-Commerce-Website, Influencer-Partnerschaften und Performance-Marketing für schnelles Wachstum."
+      },
+      "restaurant-local": {
+        "title": "Local Awareness – Restaurant Chain",
+        "description": "Hyperlokale Marketing-Kampagne mit Google Ads, Social Media und Community-Building für mehr Foot Traffic und Online-Bestellungen."
+      },
+      "employer-branding": {
+        "title": "Employer Branding Campaign",
+        "description": "Talent-Acquisition-Strategie mit Employer-Branding-Website, Social-Content und Recruiting-Kampagnen für bessere Bewerberqualität."
       }
     }
   },
   "testimonials": {
-    "label": "What our clients say",
-    "title": "Testimonials",
+    "label": "Was unsere Kund:innen sagen",
+    "title": "Kundenstimmen",
     "description": "Echte Erfahrungen von Kunden, die mit uns erfolgreiche digitale Projekte umgesetzt haben.",
     "average": "Durchschnitt",
+    "verified": "Verifiziertes Kundenfeedback",
+    "punchline": "Wir arbeiten eng mit Foundern, Marketing-Leads und Sales-Teams – mit klaren Sprints und messbaren Ergebnissen.",
+    "cta": "Projekt anfragen",
+    "ctaNote": "Antwort innerhalb von 24h",
+    "featured": "Schlüsselergebnis",
     "ratingLabel": "Bewertung {rating} von 5",
     "roles": {
-      "Founder, DTC Brand": "Gründerin, DTC Brand",
-      "CEO, SaaS Startup": "CEO, SaaS Startup",
-      "Head of Marketing, Retail": "Head of Marketing, Retail"
+      "Founder, DTC Brand": "Gründer:in, DTC-Brand",
+      "CEO, SaaS Startup": "CEO, SaaS-Startup",
+      "Head of Marketing, Retail": "Leitung Marketing, Retail"
     },
     "items": {
       "anna-k": {
@@ -133,8 +229,8 @@
     "label": "Kontakt",
     "title": "Lass uns über dein Projekt sprechen",
     "description": "Buche uns für Launches, Rebrands oder Always-on Content. Wir antworten innerhalb von 24 Stunden.",
-    "formTitle": "Stellen Sie uns eine Anfrage",
-    "formDescription": "Erzählen Sie uns kurz von Ihrem Projekt – wir melden uns mit einer Einschätzung zurück.",
+    "formTitle": "Stell uns eine Anfrage",
+    "formDescription": "Erzähl uns kurz von deinem Projekt – wir melden uns mit einer Einschätzung zurück.",
     "firstName": "Vorname",
     "lastName": "Nachname",
     "email": "E‑Mail Adresse",
@@ -154,7 +250,7 @@
     "messagePlaceholder": "Bitte geben Sie uns Details Ihres Projekts an...",
     "submitting": "Wird gesendet...",
     "submit": "Anfrage senden",
-    "success": "Danke für deine Anfrage – wir melden uns bald bei Ihnen!",
+    "success": "Danke für deine Anfrage – wir melden uns bald bei dir!",
     "servicesLabel": "Leistungen",
     "servicesTitle": "Was wir für dich umsetzen",
     "servicesDescription": "Websites, Social Media, Kampagnen und Branding – wir schnüren dir ein Paket, das zu deinem Budget und deiner Zielgruppe passt.",

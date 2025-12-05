@@ -10,9 +10,15 @@ export default function TestimonialsSection() {
   const headerRef = useRef(null);
 
   const { t } = useTranslation();
-  
-  // Calculate average rating
-  const averageRating = testimonials.reduce((sum, testimonial) => sum + (testimonial.rating || 0), 0) / testimonials.length;
+
+  const averageRating =
+    testimonials.reduce(
+      (sum, testimonial) => sum + (testimonial.rating || 0),
+      0
+    ) / testimonials.length;
+
+  const featuredTestimonial = testimonials[0];
+  const otherTestimonials = testimonials.slice(1);
 
   useEffect(() => {
     // Header Animation Observer
@@ -51,7 +57,7 @@ export default function TestimonialsSection() {
     );
 
     const wrappers = sectionRef.current?.querySelectorAll(".testimonial-card-wrapper");
-    
+
     // Check if cards are already visible on mount
     wrappers?.forEach((wrapper, index) => {
       cardsObserver.observe(wrapper);
@@ -77,24 +83,20 @@ export default function TestimonialsSection() {
   }, []);
 
   return (
-    <section id="testimonials" className="section testimonials testimonials-section-enhanced" ref={sectionRef}>
+    <section
+      id="testimonials"
+      className="section testimonials testimonials-section-enhanced"
+      ref={sectionRef}
+    >
       <div className="testimonials-background-accent" aria-hidden="true" />
-      
-      <header 
-        className={`section-header testimonials-header ${
-          isHeaderVisible ? "testimonials-header-visible" : ""
-        }`}
+
+      <header
+        className={`section-header testimonials-header ${isHeaderVisible ? "testimonials-header-visible" : ""
+          }`}
         ref={headerRef}
       >
         <div className="testimonials-header-top">
           <p className="section-label testimonials-label">{t("testimonials.label")}</p>
-          <div className="testimonials-stat-badge">
-            <span className="testimonials-stat-rating">{averageRating.toFixed(1)}</span>
-            <div className="testimonials-stat-stars">
-              {"★".repeat(Math.round(averageRating))}
-            </div>
-            <span className="testimonials-stat-label">{t("testimonials.average")}</span>
-          </div>
         </div>
         <h2 className="section-title testimonials-title">{t("testimonials.title")}</h2>
         <p className="section-description testimonials-description">
@@ -102,20 +104,72 @@ export default function TestimonialsSection() {
         </p>
       </header>
 
-      <div className="testimonials-grid">
-        {testimonials.map((testimonial, index) => (
+      {featuredTestimonial && (
+        <div className="testimonials-feature">
           <div
-            key={testimonial.id}
-            className={`testimonial-card-wrapper ${
-              index === 2 ? "testimonial-card-featured" : ""
-            } ${
-              visibleCards.has(index) ? "testimonial-card-visible" : ""
-            }`}
-            data-index={index}
+            className={`testimonial-card-wrapper testimonial-card-featured ${visibleCards.has(0) ? "testimonial-card-visible" : ""
+              }`}
+            data-index={0}
           >
-            <TestimonialCard testimonial={testimonial} />
+            <TestimonialCard
+              testimonial={featuredTestimonial}
+              variant="featured"
+            />
           </div>
-        ))}
+
+          <div className="testimonials-meta-panel">
+            <div className="testimonials-meta-top">
+              <span className="testimonial-chip">{t("testimonials.verified")}</span>
+              <div
+                className="testimonials-stat-badge testimonials-stat-badge-compact"
+                aria-label={t("testimonials.average")}
+              >
+                <span className="testimonials-stat-rating">
+                  {averageRating.toFixed(1)}
+                </span>
+                <div className="testimonials-stat-stars">
+                  {"★".repeat(Math.round(averageRating))}
+                </div>
+                <span className="testimonials-stat-label">
+                  {t("testimonials.average")}
+                </span>
+              </div>
+            </div>
+
+            <p className="testimonials-meta-text">{t("testimonials.punchline")}</p>
+
+            <div className="testimonials-meta-actions">
+              <a
+                className="btn btn-primary btn-sm"
+                href="#contact"
+                aria-label={`${t("testimonials.cta")} – ${t("testimonials.ctaNote")}`}
+              >
+                {t("testimonials.cta")}
+              </a>
+              <span className="testimonials-meta-note">{t("testimonials.ctaNote")}</span>
+            </div>
+          </div>
+        </div>
+      )}
+
+      <div
+        className="testimonials-grid testimonials-scroller"
+        tabIndex={0}
+        aria-label={t("testimonials.title")}
+      >
+        {otherTestimonials.map((testimonial, index) => {
+          const dataIndex = index + 1;
+          return (
+            <div
+              key={testimonial.id}
+              className={`testimonial-card-wrapper ${visibleCards.has(dataIndex) ? "testimonial-card-visible" : ""
+                }`}
+              data-index={dataIndex}
+            >
+              <TestimonialCard testimonial={testimonial} variant="compact" />
+            </div>
+          );
+        })}
       </div>
     </section>
   );

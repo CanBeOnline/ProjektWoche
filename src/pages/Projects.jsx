@@ -84,9 +84,9 @@ export default function Projects() {
     return (
         <section id="projects" className="section projects">
             <header className="section-header projects-intro">
-                <p className="section-label">{t("projects.label")}</p>
-                <h1 className="section-title">{t("projects.pageTitle")}</h1>
-                <p className="section-description">
+                <p className="section-label projects-label">{t("projects.label")}</p>
+                <h1 className="section-title projects-main-title">{t("projects.pageTitle")}</h1>
+                <p className="section-description projects-description">
                     {t("projects.pageDescription")}
                 </p>
                 <p className="projects-meta">
@@ -136,7 +136,7 @@ export default function Projects() {
                     const forceVisual = project.id === "fashion-social" || project.id === "restaurant-local";
                     const variant = forceVisual ? "visual" : getVariant(index);
                     const kpis = getKpisForProject(project, t);
-                    
+
                     // Übersetzungen für Projekt-Daten
                     const projectTitle = t(`projects.items.${project.id}.title`, project.title);
                     const projectDescription = t(`projects.items.${project.id}.description`, project.description);
@@ -160,7 +160,7 @@ export default function Projects() {
                                 </div>
                                 <div className="project-card-body">
                                     <p className="project-meta">{translatedTags?.join(" · ")}</p>
-                                    <h3>{projectTitle}</h3>
+                                    <h3 className="project-card-title">{projectTitle}</h3>
                                     <p className="project-text">{projectDescription}</p>
                                     <div className="tag-list">
                                         {project.tags?.map((tag) => (
@@ -201,7 +201,7 @@ export default function Projects() {
                                     <div className="project-meta-row">
                                         <span className="project-meta">{translatedTags?.join(" · ")}</span>
                                     </div>
-                                    <h3>{projectTitle}</h3>
+                                    <h3 className="project-card-title">{projectTitle}</h3>
                                     <p className="project-text">{projectDescription}</p>
                                     <div className="project-kpi-row">
                                         {kpis.map((kpi) => (
@@ -238,7 +238,7 @@ export default function Projects() {
                             </div>
                             <div className="project-card-body">
                                 <p className="project-meta">{translatedTags?.join(" · ")}</p>
-                                <h3>{projectTitle}</h3>
+                                <h3 className="project-card-title">{projectTitle}</h3>
                                 <p className="project-text">
                                     {projectDescription} {t("projects.projectDescriptionSuffix")}
                                 </p>
